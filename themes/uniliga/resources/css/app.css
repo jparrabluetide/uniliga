@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tarawera-50: #e9fffe;
+  --color-tarawera-100: #c9fffc;
+  --color-tarawera-200: #99fffd;
+  --color-tarawera-300: #54ffff;
+  --color-tarawera-400: #07f3ff;
+  --color-tarawera-500: #00d5ef;
+  --color-tarawera-600: #00a9c9;
+  --color-tarawera-700: #0086a1;
+  --color-tarawera-800: #086b82;
+  --color-tarawera-900: #0c586d;
+  --color-tarawera-950: #003b4d;
+
+  --color-scooter-50: #ebffff;
+  --color-scooter-100: #cefdff;
+  --color-scooter-200: #a2f8ff;
+  --color-scooter-300: #63f0fd;
+  --color-scooter-400: #1cdef4;
+  --color-scooter-500: #00bed6;
+  --color-scooter-600: #039ab7;
+  --color-scooter-700: #0a7b94;
+  --color-scooter-800: #126278;
+  --color-scooter-900: #145265;
+  --color-scooter-950: #063646;
+
+
+
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-oswald: 'Oswald', sans-serif;
+
+}
+
+
+.bg-shape-menu {
+  @apply bg-tarawera-500 absolute top-0 w-[258px] h-[150px];
+  left: calc(50% - 258px/2);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
+
+#menu-menu-1, #menu-menu-2 {
+  @apply flex gap-4 items-center font-family-oswald uppercase text-white text-base;
+}
+
+#menu-menu-1 .menu-item {
+  @apply border-b border-transparent;
+}
+
+#menu-menu-1 .menu-item.current_page_item {
+  @apply text-scooter-500 border-scooter-500;
+}

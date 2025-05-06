@@ -25,6 +25,7 @@ function bluetide_setup()
   register_nav_menus(
     array(
       'menu-1' => esc_html__('Primary', 'bluetide'),
+      'menu-2' => esc_html__('Menu 2', 'bluetide'),
     )
   );
 
@@ -47,8 +48,8 @@ function bluetide_widgets_init()
 
   register_sidebar(
     array(
-      'name' => esc_html__('Footer', 'bluetide'),
-      'id' => 'footer',
+      'name' => esc_html__('Footer About', 'bluetide'),
+      'id' => 'footer-about',
       'description' => esc_html__('Add widgets here.', 'bluetide'),
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget' => '</section>',
