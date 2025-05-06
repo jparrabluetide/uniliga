@@ -24,4 +24,5 @@
 
   <?php get_template_part( 'templates/mobileMainMenu', null ); ?>
   <?php get_template_part( 'templates/mainMenu', null ); ?>
+  <?php get_template_part( 'templates/carousels/carousel-1', null ); ?>
 

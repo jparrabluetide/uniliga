@@ -1,5 +1,5 @@
 <header class="w-full bg-tarawera-950 hidden lg:block">
-  <div class="container mx-auto px-4 relative py-11 flex items-center justify-between">
+  <div class="container mx-auto px-4 relative py-6 flex items-center justify-between">
     <?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'menu-menu-1')); ?>
     <div class="bg-shape-menu">
       <div class="w-[100px] h-[100px] mx-auto my-4">

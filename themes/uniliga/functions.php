@@ -74,8 +74,8 @@ add_action('widgets_init', 'bluetide_widgets_init');
 
 function bluetide_styles_scripts()
 {
-  wp_enqueue_style('bluetide-style', get_template_directory_uri() . '/public/css/app.css', array(), VERSION);
-  wp_enqueue_script('bluetide-script', get_template_directory_uri() . '/public/js/app.js', array('jquery'), VERSION, true);
+  wp_enqueue_style('bluetide-style', get_template_directory_uri() . '/public/css/app.css', array('swiper'), VERSION);
+  wp_enqueue_script('bluetide-script', get_template_directory_uri() . '/public/js/app.js', array('jquery', 'swiper'), VERSION, true);
 }
 
 add_action('wp_enqueue_scripts', 'bluetide_styles_scripts');
