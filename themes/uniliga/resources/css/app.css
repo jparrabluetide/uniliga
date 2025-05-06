@@ -34,19 +34,52 @@
 
 
 .bg-shape-menu {
-  @apply bg-tarawera-500 absolute top-0 w-[258px] h-[150px];
-  left: calc(50% - 258px/2);
+  @apply bg-tarawera-500 absolute top-0 w-[245px] h-[140px];
+  left: calc(50% - 28px / 2);
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  zoom: 0.7;
 }
 
-#menu-menu-1, #menu-menu-2 {
-  @apply flex gap-4 items-center font-family-oswald uppercase text-white text-base;
+@media (min-width: 1024px) {
+  .bg-shape-menu {
+    left: calc(50% - 28px/2);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    zoom: 0.7;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bg-shape-menu {
+    left: calc(50% - 258px / 2);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    zoom: 1;
+  }
+}
+
+#menu-menu-1,
+#menu-menu-2 {
+  @apply flex gap-4 items-center font-family-oswald uppercase text-white text-sm;
 }
 
 #menu-menu-1 .menu-item {
   @apply border-b border-transparent;
 }
 
-#menu-menu-1 .menu-item.current_page_item {
+#menu-menu-1 .menu-item.current_page_item, #menu-menu-2 .menu-item.current_page_item {
   @apply text-scooter-500 border-scooter-500;
+}
+
+
+#menu-mobile-1 li,
+#menu-mobile-2 li {
+  @apply border-b border-tarawera-950 px-4 py-1;
+}
+
+#menu-mobile-1 li.current-menu-item,
+#menu-mobile-2 li.current-menu-item {
+  @apply bg-tarawera-500 text-white;
+}
+
+#menu-mobile-2 li:last-child {
+  @apply border-b-0;
 }
