@@ -58,7 +58,7 @@
 
 #menu-menu-1,
 #menu-menu-2 {
-  @apply flex gap-4 items-center font-family-oswald uppercase text-white text-sm;
+  @apply flex gap-4 items-center font-family-oswald uppercase text-white text-base;
 }
 
 #menu-menu-1 .menu-item {
@@ -72,7 +72,7 @@
 
 #menu-mobile-1 li,
 #menu-mobile-2 li {
-  @apply border-b border-tarawera-950 px-4 py-1;
+  @apply border-b border-tarawera-950 px-4 py-1 font-family-oswald uppercase text-base;
 }
 
 #menu-mobile-1 li.current-menu-item,

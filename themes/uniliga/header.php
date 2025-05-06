@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?familyOswald:wght@200..700&&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:wght@500&display=swap" rel="stylesheet">
   </script>
   <?php wp_head(); ?>
   <script>
@@ -31,12 +31,12 @@
           </a>
         </div>
         <div class="relative">
-          <div class="text-white">
+          <div class="text-white" id="btnMobileToggleMenu">
             <svg width="30px" height="30px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <div class="absolute top-10 right-0 bg-white min-w-2xs shadow-2xl">
+          <div class="absolute z-10 top-10 right-0 bg-white min-w-2xs shadow-2xl hidden" id="contMenuMobile1">
             <?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'menu-mobile-1')); ?>
             <?php wp_nav_menu(array('theme_location' => 'menu-2', 'menu_id' => 'menu-mobile-2')); ?>
           </div>
@@ -57,8 +57,8 @@
       </div>
       <div class="flex items-center gap-4">
         <?php wp_nav_menu(array('theme_location' => 'menu-2', 'menu_id' => 'menu-menu-2')); ?>
-        <a href="#" class="text-white flex items-center gap-2 uppercase border border-white py-2 px-2">
-          <span>Suscríbete</span>
+        <a href="#" class="text-white flex items-center gap-2 uppercase border border-white py-2 px-4">
+          <span class="font-family-oswald">Suscríbete</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_147_76" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
               <rect width="24" height="24" fill="white" />
