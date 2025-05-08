@@ -29,6 +29,7 @@ function bluetide_setup()
     )
   );
 
+  add_theme_support('customize-selective-refresh-widgets');
 
   add_theme_support(
     'custom-logo',
