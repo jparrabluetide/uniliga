@@ -54,6 +54,9 @@
   height: calc(100vh - 122px);
 }
 
+.elementor-custom-container {
+  @apply !container !mx-auto !px-4;
+}
 
 
 /*Menu*/
