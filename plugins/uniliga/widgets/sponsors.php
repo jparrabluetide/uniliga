@@ -29,7 +29,7 @@ class SponsorsWidget extends WP_Widget
 
     <div class="container mx-auto px-4 my-8 md:my-24">
 
-      <h3 class="text-2xl md:text-4xl font-family-oswald uppercase text-tarawera-950 mb-7">Patrocinadores</h3>
+      <h3 class="text-2xl md:text-4xl font-family-oswald uppercase text-black mb-7">Patrocinadores</h3>
       <?php if ($data->have_posts()): ?>
         <div class="grid grid-cols-5 gap-4">
           <?php while ($data->have_posts()):
