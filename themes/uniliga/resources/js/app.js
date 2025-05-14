@@ -9,5 +9,9 @@ jQuery(function () {
   if (jQuery(".swiperCarousel1").length > 0) {
     new Carousels().carousel1()
   }
+
+  if (jQuery(".swiperCarousel2").length > 0) {
+    new Carousels().carousel2()
+  }
 });
 

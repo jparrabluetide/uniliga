@@ -134,6 +134,7 @@ final class bluetideWidgets
   public function init_widgets()
   {
     require_once BLUETIDE_PLUGIN_PATH . '/widgets/carousel-1.php';
+    require_once BLUETIDE_PLUGIN_PATH . '/widgets/carousel-2.php';
   }
 
   /**

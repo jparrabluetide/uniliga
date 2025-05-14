@@ -116,10 +116,12 @@
 /*Carousel 1*/
 
 
-.swiperCarousel1-pagination .swiper-pagination-bullet {
+.swiperCarousel1-pagination .swiper-pagination-bullet,
+.swiperCarousel2-pagination .swiper-pagination-bullet {
   @apply w-2.5 h-2.5 bg-tarawera-950 !opacity-100;
 }
 
-.swiperCarousel1-pagination .swiper-pagination-bullet-active {
+.swiperCarousel1-pagination .swiper-pagination-bullet-active,
+.swiperCarousel2-pagination .swiper-pagination-bullet-active {
   @apply w-2.5 h-2.5 bg-scooter-500;
 }
