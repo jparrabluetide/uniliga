@@ -58,4 +58,4 @@ register_post_type('gallery1', $args);
  * Images
  */
 
-//add_image_size('gallery1-card', 300, 230, true);
+add_image_size('gallery1-card', 84, 84, true);

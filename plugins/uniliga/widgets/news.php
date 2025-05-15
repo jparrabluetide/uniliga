@@ -27,7 +27,7 @@ class NewsWidget extends WP_Widget
     );
 ?>
 
-    <div class="container mx-auto px-4 my-8 md:my-24">
+    <div class="container mx-auto px-4 my-8 md:my-14">
       <h3 class="text-2xl md:text-4xl font-family-oswald uppercase text-black mb-7 font-medium">Últimas noticias y eventos</h3>
       <?php if ($data->have_posts()): ?>
         <div class="grid grid-cols-5 grid-rows-4 lg:grid-rows-2 gap-4 w-full">
@@ -40,7 +40,7 @@ class NewsWidget extends WP_Widget
               $firstPost = $posts[0];
               $categoriesForFirstPost = get_the_category($firstPost->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
                   <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -71,7 +71,7 @@ class NewsWidget extends WP_Widget
               $secondPost = $posts[1];
               $categoriesForSecondPost = get_the_category($secondPost->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($secondPost->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($secondPost->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
                   <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -100,7 +100,7 @@ class NewsWidget extends WP_Widget
               $thirdPost = $posts[2];
               $categoriesForThirdPost = get_the_category($thirdPost->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($thirdPost->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($thirdPost->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
                   <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -132,7 +132,7 @@ class NewsWidget extends WP_Widget
               $categoriesForFourthPost = get_the_category($fourthPost->ID);
             
             ?>
-            <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($fourthPost->ID); ?>)">
+            <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($fourthPost->ID, 'large'); ?>)">
               <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
                 <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                   <span class="font-family-roboto text-sm uppercase text-tarawera-950">

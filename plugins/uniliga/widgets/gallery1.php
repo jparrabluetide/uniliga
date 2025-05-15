@@ -27,7 +27,7 @@ class Gallery1Widget extends WP_Widget
     );
 ?>
 
-    <div class="container mx-auto px-4 y-8 md:my-24">
+    <div class="container mx-auto px-4 y-8 md:my-14">
       <h3 class="text-2xl md:text-4xl font-family-oswald uppercase text-black mb-7 font-medium">Galería</h3>
       <div class="grid grid-cols-3 grid-rows-2 gap-4">
         <?php if ($data->have_posts()): ?>
@@ -38,7 +38,7 @@ class Gallery1Widget extends WP_Widget
               $firstPost = $posts[0];
               $categoriesPost0 = get_the_category($firstPost->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
                   <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -69,7 +69,7 @@ class Gallery1Widget extends WP_Widget
               $post1 = $posts[1];
               $categoriesPost1 = get_the_category($post1->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post1->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post1->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
                   <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -100,7 +100,7 @@ class Gallery1Widget extends WP_Widget
               $post2 = $posts[2];
               $categoriesPost2 = get_the_category($post2->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post2->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post2->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
                   <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -131,7 +131,7 @@ class Gallery1Widget extends WP_Widget
               $post3 = $posts[3];
               $categoriesPost3 = get_the_category($post3->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post3->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post3->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
                   <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
@@ -162,7 +162,7 @@ class Gallery1Widget extends WP_Widget
               $post4 = $posts[4];
               $categoriesPost4 = get_the_category($post4->ID);
             ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post4->ID); ?>)">
+              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post4->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
                   <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">

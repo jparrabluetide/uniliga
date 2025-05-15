@@ -114,6 +114,8 @@ $RECYCLE.BIN/
 /plugins/gravityforms
 /plugins/wp-migrate-db
 /plugins/sportspress
+/plugins/svg-support
+/plugins/regenerate-thumbnails
 
 # Uploads
 /uploads/
