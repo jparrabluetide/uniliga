@@ -2,6 +2,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
+  /* Colors */
+
   --color-tarawera-50: #e9fffe;
   --color-tarawera-100: #c9fffc;
   --color-tarawera-200: #99fffd;
@@ -39,12 +41,60 @@
   --color-yellow-900: #772f10;
   --color-yellow-950: #451603;
 
-
-
-
+  /*Fonts*/
 
   --font-family-roboto: 'Roboto', sans-serif;
   --font-family-oswald: 'Oswald', sans-serif;
+
+  /*Animations*/
+
+  --animate-fade-in: fade-in 0.4s ease-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  --animate-fade-out: fade-out 0.4s ease-out;
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  --animate-scale-in: scale-in 0.4s ease-out;
+
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.3);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  --animate-scale-out: scale-out 0.4s ease-out;
+
+  @keyframes scale-out {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+    }
+  }
 
 }
 
@@ -125,4 +175,42 @@
 .swiperCarousel1-pagination .swiper-pagination-bullet-active,
 .swiperCarousel2-pagination .swiper-pagination-bullet-active {
   @apply w-2.5 h-2.5 bg-scooter-500;
+}
+
+/*Modal*/
+
+.modal {
+  @apply hidden z-50;
+}
+
+.modal.is-open {
+  @apply block;
+}
+
+.modal[aria-hidden="false"] .modal__overlay {
+  @apply animate-fade-in;
+}
+
+.modal[aria-hidden="false"] .modal__container {
+  @apply animate-scale-in;
+}
+
+.modal[aria-hidden="true"] .modal__overlay {
+  @apply animate-fade-out;
+}
+
+.modal[aria-hidden="true"] .modal__container {
+  @apply animate-scale-out;
+}
+
+.modal__overlay {
+  @apply fixed inset-0 bg-black/80 flex justify-center items-center z-50;
+}
+
+.modal__container {
+  @apply p-4 max-h-[100vh] overflow-y-auto max-w-[800px] mx-auto;
+}
+
+.modal__close:before {
+  content: "\2715";
 }

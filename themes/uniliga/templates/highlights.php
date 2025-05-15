@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 my-8 md:my-14">
+<div class="container mx-auto px-4 my-8">
   <div class="grid grid-cols-3 gap-4">
     <div class="col-span-3 lg:col-span-1">
       <div class="p-7 bg-gray-300 w-full h-[350px] md:h-[500px]">
@@ -17,7 +17,7 @@
             <h4 class="text-lg md:text-2xl lg:text-3xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
               Lorem ipsum dolor sit amet consectetur
             </h4>
-            <a href="https://picsum.photos/id/29/620/640" data-lightbox="highlights-1" data-title="Click the right half of the image to move forward." class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+            <button data-title="Modal 1" data-modal="modal-highlights" data-videoid="KQyga_C5a6M" class="btn-modal cursor-pointer font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
               Ver highlights
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                 <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -27,7 +27,7 @@
                   <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
                 </g>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
             <h4 class="text-lg md:text-2xl lg:text-3xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
               Lorem ipsum dolor sit amet consectetur
             </h4>
-            <a href="https://picsum.photos/id/29/620/640" data-lightbox="highlights-1" data-title="Click the right half of the image to move forward." class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+            <button data-title="Modal 2" data-modal="modal-highlights" data-videoid="KQyga_C5a6M" class="btn-modal cursor-pointer font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
               Ver highlights
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                 <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -59,7 +59,7 @@
                   <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
                 </g>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
             <h4 class="text-lg md:text-2xl lg:text-3xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
               Lorem ipsum dolor sit amet consectetur
             </h4>
-            <a href="https://picsum.photos/id/29/620/640" data-lightbox="highlights-1" data-title="Click the right half of the image to move forward." class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+            <button data-title="Modal 3" data-modal="modal-highlights" data-videoid="KQyga_C5a6M" class="btn-modal cursor-pointer font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
               Ver highlights
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                 <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -91,10 +91,30 @@
                   <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
                 </g>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal micromodal-slide" id="modal-highlights" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <main class="modal__content">
+        <div class="w-full min-w-[80vw] md:min-w-[600px] bg-gray-200 p-1 rounded-sm">
+          <div class="w-full lg:w-[760px] aspect-video modal__video">
+          </div>
+        </div>
+      </main>
+      <footer class="modal__footer">
+        <div class="mt-2 flex gap-4 justify-between">
+          <p class="font-family-roboto text-sm text-white modal__title">Lorem ipsum dolor sit amet consectetur</p>
+          <button class="modal__close text-white text-3xl cursor-pointer focus:outline-0" aria-label="Close modal" data-micromodal-close></button>
+        </div>
+      </footer>
     </div>
   </div>
 </div>

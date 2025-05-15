@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:wght@500&display=swap" rel="stylesheet">
-  </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
   <?php wp_head(); ?>
   <script>
     var siteConfig = {
@@ -22,6 +22,5 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
-  <?php get_template_part( 'templates/mobileMainMenu', null ); ?>
-  <?php get_template_part( 'templates/mainMenu', null ); ?>
-
+  <?php get_template_part('templates/mobileMainMenu', null); ?>
+  <?php get_template_part('templates/mainMenu', null); ?>

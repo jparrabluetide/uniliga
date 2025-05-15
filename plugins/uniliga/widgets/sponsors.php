@@ -27,11 +27,10 @@ class SponsorsWidget extends WP_Widget
     );
 ?>
 
-    <div class="container mx-auto px-4 my-8 md:my-14">
-
+    <div class="sponsors">
       <h3 class="text-2xl md:text-4xl font-family-oswald uppercase text-black mb-7 font-medium">Patrocinadores</h3>
       <?php if ($data->have_posts()): ?>
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-12 lg:grid-cols-5 gap-4">
           <?php while ($data->have_posts()):
             $data->the_post();
             $dataId = get_the_ID();
@@ -40,7 +39,7 @@ class SponsorsWidget extends WP_Widget
             $imageCardSize = 'sponsor-card';
             $imageCardSrc = wp_get_attachment_image_src($imageCardId, $imageCardSize);
           ?>
-            <div class="col-span-5 sm:col-span-2 lg:col-span-1 h-[220px] bg-gray-300">
+            <div class="col-span-12 md:col-span-6 lg:col-span-1 h-[220px] bg-gray-300">
               <a href="<?php echo get_post_meta($dataId, 'bluetide_fields_sponsor_url', true) ?>" class="w-full h-auto block">
                 <img src="<?php echo $imageCardSrc[0]; ?>" class="w-full object-cover !h-[220px]" alt="<?php the_title(); ?>" />
               </a>
