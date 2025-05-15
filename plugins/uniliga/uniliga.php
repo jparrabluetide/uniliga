@@ -31,7 +31,7 @@ require_once dirname(__FILE__) . '/post-types/index.php';
  * Custom Fields.
  */
 
- require_once dirname(__FILE__) . '/fields/index.php';
+require_once dirname(__FILE__) . '/fields/index.php';
 
 
 /**
@@ -43,4 +43,4 @@ require_once dirname(__FILE__) . '/elementor.php';
  * Custom Widgets.
  */
 
- require_once dirname(__FILE__) . '/widgets/index.php';
+require_once dirname(__FILE__) . '/widgets/index.php';
