@@ -81,13 +81,13 @@ class UpcomingGamesWidget extends WP_Widget
                 <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center [&>img]:aspect-square [&>img]:w-16 [&>img]:object-contain">
                   <?php echo get_the_post_thumbnail($teams[0], 'sportspress-fit-icon', array('itemprop' => 'logo')); ?>
                 </div>
-                <p class="!mb-0 text-3xl font-bold">VS</p>
+                <p class="!mb-0 text-base md:text-xl font-bold font-family-oswald">VS</p>
                 <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center [&>img]:aspect-square [&>img]:w-16 [&>img]:object-contain">
                   <?php echo get_the_post_thumbnail($teams[1], 'sportspress-fit-icon', array('itemprop' => 'logo')); ?>
                 </div>
               </div>
               <div class="bg-[#003B4D] py-3">
-                <p class="text-center text-sm text-white uppercase font-bold !mb-0">
+                <p class="text-center text-sm text-white uppercase font-bold !mb-0 font-family-oswald">
                   <?php echo $leagues[0]->name; ?>
                 </p>
               </div>

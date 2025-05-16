@@ -1,3 +1,13 @@
+<?php
+
+  $page_slug = 'sobre-uniliga';
+
+  switch_to_blog(1);
+  $page = get_page_by_path($page_slug);
+  $page_url = get_permalink($page->ID);
+  restore_current_blog();
+?>
+
 <footer class="bg-tarawera-950 w-full pt-10 pb-5">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-4 gap-10 lg:gap-30">
@@ -7,20 +17,11 @@
       </div>
       <div class="col-span-4 md:col-span-2 xl:col-span-1">
         <h3 class="text-white text-xl font-family-oswald uppercase mb-6">Site map</h3>
-        <a href="#" class="text-white text-base">Sobre UniLiga</a>
+        <a href="<?php echo $page_url; ?>" class="text-white text-base">Sobre UniLiga</a>
         <div class="w-full h-[1px] bg-scooter-500 my-4"></div>
         <ul>
           <li>
-            <a href="#" class="text-white text-base">Vóley</a>
-          </li>
-          <li>
-            <a href="#" class="text-white text-base">Baloncesto</a>
-          </li>
-          <li>
-            <a href="#" class="text-white text-base">Fútbol</a>
-          </li>
-          <li>
-            <a href="#" class="text-white text-base">Flag</a>
+            <a href="/voley" class="text-white text-base">Vóley</a>
           </li>
         </ul>
         <div class="w-full h-[1px] bg-scooter-500 my-4"></div>
