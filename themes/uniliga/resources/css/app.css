@@ -214,3 +214,78 @@
 .modal__close:before {
   content: "\2715";
 }
+
+/*Newsletter*/
+
+.formNewsletter {
+  @apply md:!flex !flex-col md:!flex-row !items-center !gap-0 !w-full;
+}
+
+.formNewsletter .gform-body,
+.formNewsletter_wrapper {
+  @apply !w-full;
+}
+
+.formNewsletter input {
+  @apply !w-full;
+}
+
+.gform-theme--foundation .gfield--width-eleven-twelfths {
+  @apply !col-span-12;
+
+}
+
+.formNewsletter .gform-footer {
+  @apply !mt-0;
+}
+
+.formNewsletter input[type="email"] {
+  @apply !border-[#003B4D] !rounded-none;
+}
+
+.formNewsletter input[type="submit"] {
+  @apply !border-[#003B4D] !bg-[#003B4D] !text-white !rounded-none !mt-2 md:!mt-0 !font-family-oswald !font-bold;
+}
+
+/*Calendario*/
+
+.calendarGameEvents {
+  @apply !p-0;
+}
+
+.calendarGameEvents table {
+  @apply !w-full !border-0;
+}
+
+.calendarGameEvents .sp-calendar-wrapper {
+  @apply !border !border-[#003B4D] !w-full;
+}
+
+.calendarGameEvents .sp-table-caption {
+  @apply !bg-scooter-500 font-family-oswald !text-white !capitalize !text-2xl md:!text-4xl !border-0;
+}
+
+.calendarGameEvents thead tr th {
+  @apply !bg-tarawera-950 !text-white !font-normal !text-xl md:!text-2xl !py-3 !border !border-scooter-500;
+}
+
+.calendarGameEvents tbody tr td {
+  @apply !bg-gray-200 !text-base !border !border-gray-400;
+}
+
+.calendarGameEvents tbody tr td.pad {
+  @apply !bg-white;
+}
+
+.calendarGameEvents tbody tr td#today {
+  @apply !bg-scooter-500 !text-white;
+}
+
+.calendarGameEvents tbody tr td a {
+  @apply absolute w-full h-full bg-[#FAB52F] inset-0 flex justify-center items-center !text-white;
+}
+
+
+.calendarGameEvents tbody tr td a::before, .calendarGameEvents tfoot {
+  @apply !hidden;
+}
