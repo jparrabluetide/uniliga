@@ -8,7 +8,7 @@
   restore_current_blog();
 ?>
 
-<footer class="bg-tarawera-950 w-full pt-10 pb-5">
+<footer class="bg-tarawera-950 w-full pt-10 md:pt-36 pb-5">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-4 gap-10 lg:gap-30">
       <div class="col-span-4 md:col-span-2 xl:col-span-1">
