@@ -164,6 +164,18 @@
   @apply border-b-0;
 }
 
+#menu-sport {
+  @apply flex gap-4 items-center justify-center font-family-oswald font-medium uppercase text-white text-base;
+}
+
+#menu-sport .menu-item {
+  @apply border-b border-transparent;
+}
+
+#menu-sport .menu-item.current_page_item {
+  @apply text-tarawera-950 border-tarawera-950;
+}
+
 /*Carousel 1*/
 
 

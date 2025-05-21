@@ -19,8 +19,16 @@
   </script>
 </head>
 
+<?php
+$blog_id = get_current_blog_id();
+?>
+
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
   <?php get_template_part('templates/mobileMainMenu', null); ?>
-  <?php get_template_part('templates/mainMenu', null); ?>
+  <?php if ($blog_id == 1): ?>
+    <?php get_template_part('templates/mainMenu', null); ?>
+  <?php else:; ?>
+    <?php get_template_part('templates/mainMenuSport', null); ?>
+  <?php endif; ?>

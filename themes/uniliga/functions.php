@@ -26,6 +26,7 @@ function bluetide_setup()
     array(
       'menu-1' => esc_html__('Primary', 'bluetide'),
       'menu-2' => esc_html__('Menu 2', 'bluetide'),
+      'menu-sport' => esc_html__('Menu sport', 'bluetide'),
     )
   );
 
