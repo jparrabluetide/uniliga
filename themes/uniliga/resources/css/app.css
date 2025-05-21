@@ -301,3 +301,29 @@
 .calendarGameEvents tbody tr td a::before, .calendarGameEvents tfoot {
   @apply !hidden;
 }
+
+/*Tabla*/
+
+.tablePosition table thead tr {
+  @apply !border-none;
+}
+
+.tablePosition table thead tr th {
+  @apply !bg-gradient-to-b !from-[#00BED6] !to-[#003B4D] !text-white !font-family-oswald !uppercase !text-lg !py-2 !border-none;
+}
+
+.tablePosition table tbody tr td {
+  @apply !bg-white !text-base !font-family-roboto !text-tarawera-950 !border-t-0 !border-l-0 !border-r-0 !border-b !border-tarawera-950 !py-2;
+}
+
+.tablePosition .sp-league-table-link {
+  @apply  !py-2 !px-2;
+}
+
+.tablePosition .sp-league-table-link a {
+  @apply !text-tarawera-950 !font-family-oswald !text-lg !uppercase !text-center !font-normal !block !bg-scooter-500 !py-3;
+}
+
+.tablePosition .sp-template-league-table {
+  @apply !bg-white;
+}
