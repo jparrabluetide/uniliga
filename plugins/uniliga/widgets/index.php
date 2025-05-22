@@ -9,6 +9,7 @@ function bluetide_widgets()
   require_once dirname(__FILE__) . '/hightlights.php';
   require_once dirname(__FILE__) . '/newsletter-footer.php';
   require_once dirname(__FILE__) . '/next-game.php';
+  require_once dirname(__FILE__) . '/anotation-players.php';
 }
 
 add_action('widgets_init', 'bluetide_widgets');
