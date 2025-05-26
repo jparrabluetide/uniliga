@@ -189,7 +189,7 @@ class BluetideElementorCarousel extends Widget_Base
         <div class="swiperCarousel1-pagination"></div>
       </div>
     </div>
-<?
+<?php
   }
 
   protected function content_template() {}
