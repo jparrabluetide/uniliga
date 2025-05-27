@@ -14,7 +14,7 @@
       <div class="col-span-3 xl:col-span-2">
         <div class="flex items-center gap-4">
           <?php wp_nav_menu(array('theme_location' => 'menu-2', 'menu_id' => 'menu-menu-2')); ?>
-          <a href="#" class="text-white flex items-center gap-2 uppercase border border-white py-2 px-4">
+          <a href="#newsletterFooter" class="text-white flex items-center gap-2 uppercase border border-white py-2 px-4">
             <span class="font-family-oswald">Suscríbete</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0_147_76" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">

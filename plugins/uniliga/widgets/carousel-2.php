@@ -93,9 +93,9 @@ class BluetideElementorCarousel2 extends Widget_Base
       <div class="swiper-wrapper">
         <?php foreach ($settings[$prefix . 'slider'] as $slide) : ?>
           <div class="swiper-slide">
-            <div class="w-full h-[250px] md:h-[320px] bg-gray-400 bg-cover bg-no-repeat" style="background-image: url('<?php echo $slide[$prefix . 'slider_bg']['url']; ?>');">
+            <div class="w-full h-[250px] md:h-[420px] bg-gray-400 bg-cover bg-no-repeat" style="background-image: url('<?php echo $slide[$prefix . 'slider_bg']['url']; ?>');">
               <div class="container mx-auto px-4 h-full">
-                <div class="flex flex-col h-full justify-center">
+                <div class="flex flex-col h-full justify-end pb-12 md:pb-24">
                   <div class="flex items-center gap-2 text-tarawera-950 text-xs md:text-sm uppercase font-family-roboto font-medium mb-2">
                     <a href="<?php echo home_url(); ?>">
                       <?php echo __('Home', 'bluetide') ?>

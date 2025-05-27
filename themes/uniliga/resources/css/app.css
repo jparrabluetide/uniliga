@@ -329,6 +329,10 @@
   @apply !bg-white;
 }
 
+.tablePosition .widgettitle {
+  @apply font-family-oswald uppercase text-tarawera-950 font-medium text-center mb-5 text-xl md:text-3xl;
+}
+
 /*Formulario Busqueda*/
 
 .search-form .search-field {
