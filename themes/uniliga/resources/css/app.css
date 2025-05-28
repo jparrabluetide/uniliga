@@ -146,7 +146,7 @@
 
 #menu-menu-1 .menu-item.current_page_item,
 #menu-menu-2 .menu-item.current_page_item {
-  @apply text-scooter-500 border-scooter-500;
+  @apply text-scooter-700 border-scooter-700;
 }
 
 
@@ -169,13 +169,29 @@
 }
 
 #menu-sport .menu-item {
-  @apply border-b border-transparent;
+  @apply border-b border-transparent relative;
 }
 
 #menu-sport .menu-item.current_page_item {
   @apply text-tarawera-950 border-tarawera-950;
 }
 
+#menu-sport .sub-menu {
+  @apply absolute -top-0 -left-6 w-max pt-10 z-10 hidden;
+}
+
+#menu-sport .sub-menu::after {
+  content: "";
+  @apply absolute top-8 left-12 w-5 h-5 bg-tarawera-950 rotate-45;
+}
+
+#menu-sport .sub-menu li {
+  @apply  px-4 py-2 bg-tarawera-950;
+}
+
+#menu-sport li.menu-item-has-children:hover .sub-menu {
+  @apply block;
+}
 /*Carousel 1*/
 
 
