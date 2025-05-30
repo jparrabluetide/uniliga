@@ -27,20 +27,31 @@ class NextGameWidget extends WP_Widget
   {
     switch_to_blog($instance['siteId']);
 
-    $args = array(
-      'post_type' => 'sp_event',
-      'post_status' => 'future',
-      'posts_per_page' => 3,
-      'order_by' => 'date',
-      'order' => 'ASC',
-      'tax_query' => array(
-        array(
-          'taxonomy' => 'sp_league',
-          'field' => 'id',
-          'terms' => $instance['leagueId']
+    if ($instance['leagueId'] == '-1') {
+      $args = array(
+        'post_type' => 'sp_event',
+        'post_status' => 'future',
+        'posts_per_page' => 3,
+        'order_by' => 'date',
+        'order' => 'ASC',
+      );
+    } else {
+      $args = array(
+        'post_type' => 'sp_event',
+        'post_status' => 'future',
+        'posts_per_page' => 3,
+        'order_by' => 'date',
+        'order' => 'ASC',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'sp_league',
+            'field' => 'id',
+            'terms' => $instance['leagueId']
+          )
         )
-      )
-    );
+      );
+    }
+
 
     $data = new WP_Query($args);
 ?>
@@ -297,6 +308,7 @@ class NextGameWidget extends WP_Widget
     <p>
       <label for="<?php echo $this->get_field_id('leagueId'); ?>"><?php _e('Leagues:', 'bluetide'); ?></label>
       <select class="widefat" id="<?php echo $this->get_field_id('leagueId'); ?>" name="<?php echo $this->get_field_name('leagueId'); ?>">
+        <option value="-1"><?php _e('All', 'bluetide'); ?></option>
         <?php foreach ($leagues as $league) : $selected = ($league->term_id == $leagueId) ? 'selected' : ''; ?>
           <option value="<?php echo $league->term_id; ?>" <?php echo $selected; ?>><?php echo $league->name; ?></option>
         <?php endforeach; ?>
