@@ -102,6 +102,7 @@ $RECYCLE.BIN/
 /languages
 /plugins/index.php
 /themes/index.php
+/db.php
 /wp-*.php
 
 
@@ -116,6 +117,7 @@ $RECYCLE.BIN/
 /plugins/sportspress
 /plugins/svg-support
 /plugins/regenerate-thumbnails
+/plugins/query-monitor
 
 # Uploads
 /uploads/

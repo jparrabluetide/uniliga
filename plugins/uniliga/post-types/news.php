@@ -35,7 +35,7 @@ $args = array(
   'labels' => $labels,
   'supports' => array('title', 'editor', 'thumbnail'),
   'hierarchical' => false,
-  'public' => false,
+  'public' => true,
   'show_ui' => true,
   'show_in_menu' => true,
   'menu_position' => 5,
@@ -48,7 +48,7 @@ $args = array(
   'rewrite' => array('slug' => 'news'),
   'menu_icon' => 'dashicons-text-page',
   'show_in_rest' => false,
-  'rest_base' => 'news',
+  'rest_base' => 'new',
   'capability_type' => 'post',
   'taxonomies' => array('category'),
 );

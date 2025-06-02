@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('VERSION')) {
-  define('VERSION', '1.0.2');
+  define('VERSION', '1.0.3');
 }
 
 function bluetide_setup()
@@ -12,11 +12,11 @@ function bluetide_setup()
   add_theme_support(
     'html5',
     array(
-      //'search-form',
+      'search-form',
       //'comment-form',
       //'comment-list',
-      //'gallery',
-      //'caption',
+      'gallery',
+      'caption',
       //'style',
       //'script',
     )

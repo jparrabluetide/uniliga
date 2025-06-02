@@ -35,7 +35,7 @@ $args = array(
   'labels' => $labels,
   'supports' => array('title', 'editor', 'thumbnail'),
   'hierarchical' => false,
-  'public' => false,
+  'public' => true,
   'show_ui' => true,
   'show_in_menu' => true,
   'menu_position' => 5,
@@ -50,7 +50,7 @@ $args = array(
   'show_in_rest' => false,
   'rest_base' => 'highlight',
   'capability_type' => 'post',
-  'taxonomies' => array('category'),
+  'taxonomies' => array('category')
 );
 register_post_type('highlight', $args);
 

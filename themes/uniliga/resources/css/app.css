@@ -389,3 +389,19 @@
   margin-right: 0.5em; /* Add some spacing between the icon and label */
 }
 
+/*
+Pagination
+*/
+
+.pagination {
+  @apply py-6 w-max mx-auto;
+}
+
+.pagination .page-numbers {
+  @apply bg-tarawera-950 text-white py-2 px-4 md:mx-1 rounded-sm;
+}
+
+.pagination .current {
+  @apply bg-scooter-500 ;
+}
+
