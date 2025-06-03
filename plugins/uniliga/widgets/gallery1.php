@@ -16,15 +16,33 @@ class Gallery1Widget extends WP_Widget
 
   public function widget($args, $instance)
   {
-    $data = new WP_Query(
-      array(
+    if (empty($instance['spLeagues'])) {
+      $args = array(
         'post_type' => 'gallery1',
         'posts_status' => 'publish',
         'order_by' => 'date',
         'order' => 'DESC',
         'posts_per_page' => $instance['numberPost'] ?? 5,
-      )
-    );
+      );
+    } else {
+      $args = array(
+        'post_type' => 'gallery1',
+        'posts_status' => 'publish',
+        'order_by' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'sp_league',
+            'field' => 'id',
+            'terms' => $instance['spLeagues'],
+            'operator' => 'IN'
+          )
+        ),
+        'posts_per_page' => $instance['numberPost'] ?? 5,
+      );
+    }
+
+    $data = new WP_Query($args);
 ?>
 
     <div class="gallery-1">
@@ -200,6 +218,7 @@ class Gallery1Widget extends WP_Widget
   {
     // Update widget options
     $instance['numberPost'] = strip_tags($new_instance['numberPost']);
+    $instance['spLeagues'] = array_map('strip_tags', $new_instance['spLeagues']);
     return $instance;
   }
 
@@ -208,6 +227,7 @@ class Gallery1Widget extends WP_Widget
   {
     // Retrieve widget options from $instance
     $numberPost = isset($instance['numberPost']) ? $instance['numberPost'] : 5;
+    $spLeagues = isset($instance['spLeagues']) ? $instance['spLeagues'] : array();
     // Display widget settings form
   ?>
     <p>
@@ -217,6 +237,23 @@ class Gallery1Widget extends WP_Widget
       <input class="widefat" id="<?php echo $this->get_field_id('numberPost'); ?>"
         name="<?php echo $this->get_field_name('numberPost'); ?>" type="number" min="1" max="5"
         value="<?php echo esc_attr($numberPost); ?>" />
+    </p>
+    <p>
+      <label for="<?php echo $this->get_field_id('spLeagues'); ?>"><?php _e('Leagues:', 'bluetide'); ?></label>
+      <select class="widefat" id="<?php echo $this->get_field_id('spLeagues'); ?>" name="<?php echo $this->get_field_name('spLeagues'); ?>[]" multiple>
+        <?php
+        $leagues = get_terms(
+          array(
+            'taxonomy' => 'sp_league',
+            'hide_empty' => false, // Para incluir ligas sin eventos asociados (opcional)
+          )
+        );
+        foreach ($leagues as $league) :
+          $selected = in_array($league->term_id, $spLeagues) ? 'selected' : '';
+        ?>
+          <option value="<?php echo $league->term_id; ?>" <?php echo $selected; ?>><?php echo $league->name; ?></option>
+        <?php endforeach; ?>
+      </select>
     </p>
 <?php
   }
