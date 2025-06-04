@@ -40,8 +40,8 @@
                 'pts'
               ),
               'number' => 7,
-              'show_full_table_link' => true,
               /*
+              'show_full_table_link' => true,
               'limit' => -1, // -1 para mostrar todos los equipos, o un número para limitar
               'team' => null, // Puedes dejarlo en null para mostrar todos los equipos de la liga
               'season' => null, // null para la temporada actual o un ID específico
@@ -61,6 +61,9 @@
           echo '<p>El widget de tabla de liga de SportsPress no está disponible.</p>';
         }
         ?>
+        <div class="bg-white px-4 py-4 -mt-5">
+          <a href="<?php echo home_url('/posiciones', 'relative'); ?>" class=" text-tarawera-950 bg-scooter-500 font-family-oswald font-normal uppercase text-lg text-center py-4 px-2 block">Ver tabla completa</a>
+        </div>
       </div>
     </div>
   </div>
@@ -89,7 +92,8 @@
       the_widget(
         'Gallery1Widget',
         array(
-          'numberPost' => 5
+          'numberPost' => 5,
+          'spLeagues' => array($league_id)
         )
       );
     }
