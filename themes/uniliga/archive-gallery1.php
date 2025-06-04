@@ -1,15 +1,27 @@
 <?php get_header(); ?>
 <?php
-$data = new WP_Query(
-  array(
-    'post_type' => 'gallery1',
-    'posts_status' => 'publish',
-    'order_by' => 'date',
-    'order' => 'DESC',
-    'posts_per_page' => 12,
-    'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-  )
+
+$args = array(
+  'post_type' => 'gallery1',
+  'posts_status' => 'publish',
+  'order_by' => 'date',
+  'order' => 'DESC',
+  'posts_per_page' => 12,
+  'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 );
+
+if (isset($_GET['league'])) {
+  $args['tax_query'] = array(
+    array(
+      'taxonomy' => 'sp_league',
+      'field' => 'slug',
+      'terms' => sanitize_key($_GET['league']),
+      'operator' => 'IN'
+    )
+  );
+}
+
+$data = new WP_Query($args);
 ?>
 <div class="container px-4 mx-auto pt-10 md:pt-20 pb-10">
   <div class="gallery-1">

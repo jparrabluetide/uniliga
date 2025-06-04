@@ -17,22 +17,26 @@ class AnotationPayersWidget extends WP_Widget
   public function widget($args, $instance)
   {
 
-    $data = new WP_Query(
-      array(
-        'post_type' => 'sp_player',
-        'posts_status' => 'publish',
-        'order_by' => 'date',
-        'order' => 'DESC',
-        'posts_per_page' => $instance['numberPost'] ?? 5,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'sp_league',
-            'field' => 'id',
-            'terms' => $instance['leagueId'] ?? 2
-          )
-        )
-      )
+    $args = array(
+      'post_type'      => 'sp_player',
+      'post_status'    => 'publish',
+      'orderby'        => 'date',
+      'order'          => 'DESC',
+      'posts_per_page' => $instance['numberPost'] ?? 5,
     );
+
+    // Solo añadir tax_query si leagueId tiene valor y no es -1
+    if (!empty($instance['leagueId']) && $instance['leagueId'] != -1) {
+      $args['tax_query'] = array(
+        array(
+          'taxonomy' => 'sp_league',
+          'field'    => 'id',
+          'terms'    => $instance['leagueId']
+        )
+      );
+    }
+
+    $data = new WP_Query($args);
 ?>
     <div class="w-full">
       <?php if ($data->have_posts()): ?>
@@ -79,7 +83,7 @@ class AnotationPayersWidget extends WP_Widget
   {
     // Retrieve widget options from $instance
     $numberPost = isset($instance['numberPost']) ? $instance['numberPost'] : 5;
-    $leagueId = !empty($instance['leagueId']) ? $instance['leagueId'] : 2;
+    $leagueId = !empty($instance['leagueId']) ? $instance['leagueId'] : -1;
     // Display widget settings form
 
     $leagues = get_terms(
@@ -100,6 +104,7 @@ class AnotationPayersWidget extends WP_Widget
     <p>
       <label for="<?php echo $this->get_field_id('leagueId'); ?>"><?php _e('Leagues:', 'bluetide'); ?></label>
       <select class="widefat" id="<?php echo $this->get_field_id('leagueId'); ?>" name="<?php echo $this->get_field_name('leagueId'); ?>">
+        <option value="-1" <?php echo ($leagueId == -1) ? 'selected' : ''; ?>><?php _e('All', 'bluetide'); ?></option>
         <?php foreach ($leagues as $league) : $selected = ($league->term_id == $leagueId) ? 'selected' : ''; ?>
           <option value="<?php echo $league->term_id; ?>" <?php echo $selected; ?>><?php echo $league->name; ?></option>
         <?php endforeach; ?>
