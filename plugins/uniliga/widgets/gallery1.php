@@ -218,7 +218,11 @@ class Gallery1Widget extends WP_Widget
   {
     // Update widget options
     $instance['numberPost'] = strip_tags($new_instance['numberPost']);
-    $instance['spLeagues'] = array_map('strip_tags', $new_instance['spLeagues']);
+    if (isset($new_instance['spLeagues']) && is_array($new_instance['spLeagues'])) {
+      $instance['spLeagues'] = array_map('strip_tags', $new_instance['spLeagues']);
+    } else {
+      $instance['spLeagues'] = array(); // or some other default value
+    }
     return $instance;
   }
 

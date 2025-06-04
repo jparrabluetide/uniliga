@@ -1,5 +1,10 @@
 <?php
 
+// Evitar acceso directo
+if (!defined('ABSPATH')) {
+  exit;
+}
+
 class HighlightsWidget extends WP_Widget
 {
 
@@ -16,6 +21,7 @@ class HighlightsWidget extends WP_Widget
 
   public function widget($args, $instance)
   {
+    switch_to_blog($instance['siteId']);
 
     $data = new WP_Query(
       array(
@@ -99,23 +105,50 @@ class HighlightsWidget extends WP_Widget
         </div>
       </div>
     </div>
+    <?php restore_current_blog(); ?>
   <?php
   }
 
   public function update($new_instance, $old_instance)
   {
+    switch_to_blog($new_instance['siteId']);
+
     // Update widget options
+    $instance['siteId'] = strip_tags($new_instance['siteId']);
     $instance['numberPost'] = strip_tags($new_instance['numberPost']);
+
+    restore_current_blog();
     return $instance;
   }
 
 
   public function form($instance)
   {
+    $siteId = !empty($instance['siteId']) ? $instance['siteId'] : get_current_blog_id();
+    switch_to_blog($siteId);
+    $sites = wp_get_sites();
+
     // Retrieve widget options from $instance
     $numberPost = isset($instance['numberPost']) ? $instance['numberPost'] : 5;
-    // Display widget settings form
+
   ?>
+    <p>
+      <label for="<?php echo $this->get_field_id('siteId'); ?>"><?php _e('Site:', 'bluetide'); ?></label>
+      <select class="widefat" id="<?php echo $this->get_field_id('siteId'); ?>" name="<?php echo $this->get_field_name('siteId'); ?>">
+        <?php
+        foreach ($sites as $site) :
+          $blog_id = $site['blog_id'];
+          //$domain = $site['domain'];
+          //$path = $site['path'];
+          $site_name = get_blog_details($blog_id)->blogname; // Obtener el nombre del sitio
+          //$site_url = network_site_url($path, $domain); // Generar la URL del sitio
+          $selected = ($blog_id == $siteId) ? 'selected' : '';
+
+          echo '<option value="' . esc_attr($blog_id) . '" ' . $selected . ' >' . esc_html($site_name) . '</option>';
+        endforeach;
+        ?>
+      </select>
+    </p>
     <p>
       <label for="<?php echo $this->get_field_id('numberPost'); ?>">
         <?php _e('Number of posts'); ?>:
@@ -125,7 +158,10 @@ class HighlightsWidget extends WP_Widget
         value="<?php echo esc_attr($numberPost); ?>" />
     </p>
 <?php
+    restore_current_blog();
   }
 }
 
 register_widget('HighlightsWidget');
+
+?>

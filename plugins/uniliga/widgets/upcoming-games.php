@@ -156,3 +156,4 @@ class UpcomingGamesWidget extends WP_Widget
 }
 
 register_widget('UpcomingGamesWidget');
+?>

@@ -27,3 +27,5 @@ function bluetide_fields_gallery1()
     )
   );
 }
+
+?>

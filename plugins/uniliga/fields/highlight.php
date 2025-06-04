@@ -51,3 +51,5 @@ function bluetide_fields_highlight()
     )
   );
 }
+
+?>

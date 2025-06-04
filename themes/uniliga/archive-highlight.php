@@ -1,5 +1,19 @@
 <?php get_header(); ?>
 <?php
+require_once('uniligaConfig.php');
+
+$uniliga = new Uniliga();
+
+
+$sport = '';
+if (isset($_GET['sport'])) {
+  $sport = sanitize_key($_GET['sport']);
+  $sportId = $uniliga->getBlogIdBySportName($sport);
+  switch_to_blog($sportId);
+} else {
+  switch_to_blog(1);
+}
+
 $data = new WP_Query(
   array(
     'post_type' => 'highlight',
@@ -13,9 +27,9 @@ $data = new WP_Query(
 ?>
 <div class="container mx-auto px-4 pt-10 md:pt-20 pb-10">
   <h1 class="text-2xl md:text-4xl font-family-oswald text-tarawera-950 uppercase font-medium mb-8"><?php echo __('Highlights', 'bluetide') ?></h1>
-  <div class="grid grid-cols-3 gap-4">
-    <?php if ($data->have_posts()):
-      while ($data->have_posts()):
+  <?php if ($data->have_posts()): ?>
+    <div class="grid grid-cols-3 gap-4">
+      <?php while ($data->have_posts()):
         $data->the_post();
         $dataId = get_the_ID();
 
@@ -25,7 +39,7 @@ $data = new WP_Query(
 
         $categoriesPost = get_the_category($dataId);
         $videoId = get_post_meta($dataId, 'bluetide_fields_highlight_youtube_id', true);
-    ?>
+      ?>
         <div class="col-span-3 lg:col-span-1">
           <div class="p-7 bg-gray-300 w-full h-[350px] md:h-[500px] bg-cover bg-no-repeat" style="background-image: url('<?php echo get_the_post_thumbnail_url($dataId, 'highlight-card'); ?>')">
             <div class="flex flex-col justify-between h-full">
@@ -57,23 +71,23 @@ $data = new WP_Query(
           </div>
         </div>
       <?php endwhile; ?>
-  </div>
-  <div class="pagination">
-    <?php
+    </div>
+    <div class="pagination">
+      <?php
       echo paginate_links(array(
         'total'   => $data->max_num_pages,
         'current' => max(1, get_query_var('paged')),
         'prev_text' => __('&laquo;', 'bluetide'),
         'next_text' => __('&raquo;', 'bluetide'),
       ));
-    ?>
-  </div>
-  <?php wp_reset_postdata(); ?>
-<?php else: ?>
-  <div class="col-span-3">
-    <p class="text-center text-xl text-black"><?php _e('No posts found', 'bluetide'); ?></p>
-  </div>
-<?php endif; ?>
+      ?>
+    </div>
+    <?php wp_reset_postdata(); ?>
+  <?php else: ?>
+    <div class="w-full text-center">
+      <p class="text-center text-xl text-black"><?php _e('No posts found', 'bluetide'); ?></p>
+    </div>
+  <?php endif; ?>
 </div>
 
 <!-- Modal -->
@@ -95,5 +109,5 @@ $data = new WP_Query(
     </div>
   </div>
 </div>
-
+<?php restore_current_blog(); ?>
 <?php get_footer(); ?>

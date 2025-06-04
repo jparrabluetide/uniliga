@@ -118,6 +118,7 @@ $RECYCLE.BIN/
 /plugins/svg-support
 /plugins/regenerate-thumbnails
 /plugins/query-monitor
+/plugins/post-duplicator
 
 # Uploads
 /uploads/
