@@ -1,5 +1,5 @@
-<div class="container mx-auto px-4 relative" id="newsletterFooter">
-  <div class="bg-white w-full p-5 rounded-br-md md:absolute bottom-0 md:-bottom-28">
+<div class="container mx-auto px-4 relative newsletterFooter" id="newsletterFooter">
+  <div class="newsletterFooter__content">
     <div class="grid grid-cols-2 gap-4">
       <div class="col-span-2 lg:col-span-1 items-center">
         <div class="flex flex-col md:flex-row items-center gap-0 md:gap-5">
