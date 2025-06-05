@@ -11,8 +11,8 @@
               $categoriesForFirstPost = get_the_category($firstPost->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+                  <a href="#" class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesForFirstPost[0]->name; ?>
                     </span>
@@ -42,8 +42,8 @@
               $categoriesForSecondPost = get_the_category($secondPost->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($secondPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+                  <a href="#" class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesForSecondPost[0]->name; ?>
                     </span>
@@ -71,8 +71,8 @@
               $categoriesForThirdPost = get_the_category($thirdPost->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($thirdPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+                  <a href="#" class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesForThirdPost[0]->name; ?>
                     </span>

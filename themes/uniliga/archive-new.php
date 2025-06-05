@@ -23,8 +23,8 @@ $data = new WP_Query(
         ?>
           <div class="col-span-3 lg:col-span-1">
             <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>)">
-              <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+              <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
+                <p class="badge-sport block">
                   <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                     <?php echo $categoriesPost[0]->name; ?>
                   </span>

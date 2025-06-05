@@ -54,7 +54,7 @@ class HighlightsWidget extends WP_Widget
                   <img src="<?php echo $imageCardSrc[0]; ?>" alt="icon" class="w-10 h-10" />
                 </div>
                 <div class="">
-                  <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                  <p class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesPost[0]->name; ?>
                     </span>

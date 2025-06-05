@@ -1,5 +1,5 @@
 <div class="container mx-auto relative hidden lg:block">
-  <div class="px-8 py-3 bg-scooter-500 top-0 w-full relative z-10">
+  <div class="px-8 py-3 top-0 w-full relative z-10 menuSport">
     <div class="grid grid-cols-10 gap-4 items-center">
       <div class="col-span-1">
         <div class="w-[80px] h-[80px]">

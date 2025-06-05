@@ -4,7 +4,7 @@
     <div class="col-span-3 md:col-span-1">
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
         <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -29,7 +29,7 @@
     <div class="col-span-3 md:col-span-1 md:row-span-2">
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
         <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -54,7 +54,7 @@
     <div class="col-span-3 md:col-span-1">
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
         <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -79,7 +79,7 @@
     <div class="col-span-3 md:col-span-1">
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
         <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -104,7 +104,7 @@
     <div class="col-span-3 md:col-span-1">
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
         <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>

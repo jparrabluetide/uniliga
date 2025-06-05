@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('VERSION')) {
-  define('VERSION', '1.0.3');
+  define('VERSION', '1.0.4');
 }
 
 function bluetide_setup()

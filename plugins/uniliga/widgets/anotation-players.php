@@ -51,7 +51,7 @@ class AnotationPayersWidget extends WP_Widget
               <div class="w-full bg-gray-300 h-[340px] md:h-[280px]">
                 <img src="<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>" alt="<?php the_title(); ?>" class="w-full !h-full object-cover object-top" />
               </div>
-              <div class="bg-gradient-to-b from-[#00BED6] to-[#003B4D] py-4 px-4">
+              <div class="bg-gradient-to-b-mainColor py-4 px-4">
                 <h4 class="text-lg font-family-oswald text-white"><?php the_title(); ?></h4>
                 <p class="text-sm font-family-roboto text-scooter-500">
                   <?php echo $teamName; ?>

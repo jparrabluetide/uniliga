@@ -9,7 +9,7 @@
             </svg>
           </div>
           <div class="">
-            <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+            <p class="badge-sport block">
               <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                 Futbol
               </span>
@@ -41,7 +41,7 @@
             </svg>
           </div>
           <div class="">
-            <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+            <p class="badge-sport block">
               <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                 Futbol
               </span>
@@ -73,7 +73,7 @@
             </svg>
           </div>
           <div class="">
-            <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+            <p class="badge-sport block">
               <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                 Futbol
               </span>

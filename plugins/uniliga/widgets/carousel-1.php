@@ -135,7 +135,7 @@ class BluetideElementorCarousel extends Widget_Base
               <div class="container h-full mx-auto px-4">
                 <div class="w-full h-full flex items-center">
                   <div class="">
-                    <div class="bg-yellow-400 w-max px-2 py-1 mb-5">
+                    <div class="badge-sport">
                       <p class="font-family-roboto text-sm uppercase text-tarawera-950">
                         <?php echo $slide[$prefix . 'slider_bullet_text']; ?>
                       </p>

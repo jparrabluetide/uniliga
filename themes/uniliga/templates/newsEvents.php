@@ -3,8 +3,8 @@
   <div class="grid grid-cols-5 grid-rows-4 lg:grid-rows-2 gap-4 w-full">
     <div class="col-span-5 lg:col-span-2 lg:row-span-2 bg-gray-200 w-full h-full relative">
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
-        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -28,8 +28,8 @@
     </div>
     <div class="col-span-5 lg:col-span-2">
       <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(https://picsum.photos/id/29/620/640)">
-        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -51,8 +51,8 @@
         </div>
       </div>
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
-        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -76,8 +76,8 @@
     </div>
     <div class="col-span-5 lg:col-span-1">
       <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(https://picsum.photos/id/29/620/640)">
-        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>
@@ -99,8 +99,8 @@
         </div>
       </div>
       <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(https://picsum.photos/id/29/620/640)">
-        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t from-[#00BED6]  to-transparent">
-          <a href="#" class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+        <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
+          <a href="#" class="badge-sport block">
             <span class="font-family-roboto text-sm uppercase text-tarawera-950">
               Futbol
             </span>

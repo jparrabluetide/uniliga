@@ -56,8 +56,8 @@ class Gallery1Widget extends WP_Widget
               $categoriesPost0 = get_the_category($firstPost->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
+                  <p class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesPost0[0]->name; ?>
                     </span>
@@ -87,8 +87,8 @@ class Gallery1Widget extends WP_Widget
               $categoriesPost1 = get_the_category($post1->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post1->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
+                  <p class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesPost1[0]->name; ?>
                     </span>
@@ -118,8 +118,8 @@ class Gallery1Widget extends WP_Widget
               $categoriesPost2 = get_the_category($post2->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post2->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
+                  <p class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesPost2[0]->name; ?>
                     </span>
@@ -149,8 +149,8 @@ class Gallery1Widget extends WP_Widget
               $categoriesPost3 = get_the_category($post3->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post3->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
+                  <p class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesPost3[0]->name; ?>
                     </span>
@@ -180,8 +180,8 @@ class Gallery1Widget extends WP_Widget
               $categoriesPost4 = get_the_category($post4->ID);
             ?>
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post4->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t from-[#00BED6]  to-transparent">
-                  <p class="bg-yellow-400 w-max px-2 py-1 mb-5 block">
+                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
+                  <p class="badge-sport block">
                     <span class="font-family-roboto text-sm uppercase text-tarawera-950">
                       <?php echo $categoriesPost4[0]->name; ?>
                     </span>
