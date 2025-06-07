@@ -53,7 +53,7 @@ class AnotationPayersWidget extends WP_Widget
               </div>
               <div class="bg-gradient-to-b-mainColor py-4 px-4">
                 <h4 class="text-lg font-family-oswald text-white"><?php the_title(); ?></h4>
-                <p class="text-sm font-family-roboto text-scooter-500">
+                <p class="text-sm font-family-roboto text-white">
                   <?php echo $teamName; ?>
                 </p>
               </div>

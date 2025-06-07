@@ -62,7 +62,7 @@
         }
         ?>
         <div class="bg-white px-4 py-4 -mt-5">
-          <a href="<?php echo home_url('/posiciones', 'relative'); ?>" class=" text-tarawera-950 bg-scooter-500 font-family-oswald font-normal uppercase text-lg text-center py-4 px-2 block">Ver tabla completa</a>
+          <a href="<?php echo home_url('/posiciones', 'relative'); ?>" class=" text-tarawera-950 bg-mainColor font-family-oswald font-normal uppercase text-lg text-center py-4 px-2 block">Ver tabla completa</a>
         </div>
       </div>
     </div>
