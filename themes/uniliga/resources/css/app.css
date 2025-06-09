@@ -53,6 +53,18 @@
   --color-blaze-orange-900: #772c17;
   --color-blaze-orange-950: #40140a;
 
+  --color-blaze-yellow-50: #fffaeb;
+  --color-blaze-yellow-100: #fef0c7;
+  --color-blaze-yellow-200: #fcdf8b;
+  --color-blaze-yellow-300: #fbc74e;
+  --color-blaze-yellow-400: #fab52f;
+  --color-blaze-yellow-500: #f4900c;
+  --color-blaze-yellow-600: #d86a07;
+  --color-blaze-yellow-700: #b3490a;
+  --color-blaze-yellow-800: #91380f;
+  --color-blaze-yellow-900: #772f10;
+  --color-blaze-yellow-950: #451603;
+
   /*Fonts*/
 
   --font-family-roboto: 'Roboto', sans-serif;
@@ -534,8 +546,12 @@ Pagination
   @apply bg-blaze-orange-500;
 }
 
-.uniliga-baloncesto .swiperCarousel1-pagination .swiper-pagination-bullet-active,
-.uniliga-baloncesto .swiperCarousel2-pagination .swiper-pagination-bullet-active {
+.uniliga-baloncesto
+  .swiperCarousel1-pagination
+  .swiper-pagination-bullet-active,
+.uniliga-baloncesto
+  .swiperCarousel2-pagination
+  .swiper-pagination-bullet-active {
   @apply w-2.5 h-2.5 bg-blaze-orange-500;
 }
 
@@ -571,3 +587,70 @@ Pagination
   @apply bg-blaze-orange-500 w-full p-5 rounded-br-md md:absolute bottom-0 md:-bottom-28;
 }
 
+
+/*Futbol*/
+
+.uniliga-futbol .bg-mainColor {
+  @apply bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .text-mainColor {
+  @apply text-blaze-yellow-500;
+}
+
+.uniliga-futbol .bg-gradient-to-b-mainColor {
+  @apply bg-gradient-to-b from-blaze-yellow-500 to-blaze-yellow-900;
+}
+
+.uniliga-futbol .bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-blaze-yellow-500 to-transparent;
+}
+
+.uniliga-futbol .menuSport {
+  @apply bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .badge-sport {
+  @apply bg-blaze-yellow-500;
+}
+
+.uniliga-futbol
+  .swiperCarousel1-pagination
+  .swiper-pagination-bullet-active,
+.uniliga-futbol
+  .swiperCarousel2-pagination
+  .swiper-pagination-bullet-active {
+  @apply w-2.5 h-2.5 bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .calendarGameEvents .sp-table-caption {
+  @apply !bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .calendarGameEvents thead tr th {
+  @apply !border-blaze-yellow-500;
+}
+
+.uniliga-futbol .tablePosition table thead tr th {
+  @apply !bg-gradient-to-b !from-[#ed6a1ccc] !to-[#40140a];
+}
+
+.uniliga-futbol .tablePosition .sp-league-table-link a {
+  @apply !bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .search-form .search-submit {
+  @apply bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .contactForm input[type='submit'] {
+  @apply !border-blaze-yellow-500 !bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .pagination .current {
+  @apply bg-blaze-yellow-500;
+}
+
+.uniliga-futbol .newsletterFooter .newsletterFooter__content {
+  @apply bg-blaze-yellow-500 w-full p-5 rounded-br-md md:absolute bottom-0 md:-bottom-28;
+}

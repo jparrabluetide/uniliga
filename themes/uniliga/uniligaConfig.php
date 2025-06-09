@@ -11,6 +11,8 @@ class Uniliga
       1 => '',
       2 => 'voley',
       3 => 'baloncesto',
+      4 => 'futbol',
+      5 => 'flag',
     );
   }
   public function getSiteId()
