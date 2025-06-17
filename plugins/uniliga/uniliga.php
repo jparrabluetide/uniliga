@@ -13,7 +13,6 @@
 
 defined('ABSPATH') || die('No script kites please.');
 
-
 /**
  * Import CMB2
  */
@@ -26,13 +25,11 @@ require_once WP_PLUGIN_DIR . '/' . dirname(plugin_basename(__FILE__)) . '/libs/c
 
 require_once dirname(__FILE__) . '/post-types/index.php';
 
-
 /**
  * Custom Fields.
  */
 
 require_once dirname(__FILE__) . '/fields/index.php';
-
 
 /**
  * Widgets para elementor
