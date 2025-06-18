@@ -497,7 +497,7 @@ Pagination
 }
 
 .uniliga-voley .tablePosition table thead tr th {
-  @apply !bg-gradient-to-b !from-[#00BED6] !to-[#003B4D];
+  @apply !bg-gradient-to-b !from-scooter-500 !to-scooter-900;
 }
 
 .uniliga-voley .tablePosition .sp-league-table-link a {
@@ -564,7 +564,7 @@ Pagination
 }
 
 .uniliga-baloncesto .tablePosition table thead tr th {
-  @apply !bg-gradient-to-b !from-[#ed6a1ccc] !to-[#40140a];
+  @apply !bg-gradient-to-b !from-blaze-orange-500 !to-blaze-orange-900;
 }
 
 .uniliga-baloncesto .tablePosition .sp-league-table-link a {
@@ -632,7 +632,7 @@ Pagination
 }
 
 .uniliga-futbol .tablePosition table thead tr th {
-  @apply !bg-gradient-to-b !from-[#ed6a1ccc] !to-[#40140a];
+  @apply !bg-gradient-to-b !from-blaze-yellow-500 !to-blaze-yellow-900;
 }
 
 .uniliga-futbol .tablePosition .sp-league-table-link a {
@@ -653,4 +653,73 @@ Pagination
 
 .uniliga-futbol .newsletterFooter .newsletterFooter__content {
   @apply bg-blaze-yellow-500 w-full p-5 rounded-br-md md:absolute bottom-0 md:-bottom-28;
+}
+
+
+
+/*Flag*/
+
+.uniliga-flag .bg-mainColor {
+  @apply bg-scooter-500;
+}
+
+.uniliga-flag .text-mainColor {
+  @apply text-scooter-500;
+}
+
+.uniliga-flag .bg-gradient-to-b-mainColor {
+  @apply bg-gradient-to-b from-scooter-500 to-scooter-900;
+}
+
+.uniliga-flag .bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-scooter-500 to-transparent;
+}
+
+.uniliga-flag .menuSport {
+  @apply bg-scooter-500;
+}
+
+.uniliga-flag .badge-sport {
+  @apply bg-scooter-500;
+}
+
+.uniliga-flag
+  .swiperCarousel1-pagination
+  .swiper-pagination-bullet-active,
+.uniliga-flag
+  .swiperCarousel2-pagination
+  .swiper-pagination-bullet-active {
+  @apply w-2.5 h-2.5 bg-scooter-500;
+}
+
+.uniliga-flag .calendarGameEvents .sp-table-caption {
+  @apply !bg-scooter-500;
+}
+
+.uniliga-flag .calendarGameEvents thead tr th {
+  @apply !border-scooter-500;
+}
+
+.uniliga-flag .tablePosition table thead tr th {
+  @apply !bg-gradient-to-b !from-scooter-500 !to-scooter-900;
+}
+
+.uniliga-flag .tablePosition .sp-league-table-link a {
+  @apply !bg-scooter-500;
+}
+
+.uniliga-flag .search-form .search-submit {
+  @apply bg-scooter-500;
+}
+
+.uniliga-flag .contactForm input[type='submit'] {
+  @apply !border-scooter-500 !bg-scooter-500;
+}
+
+.uniliga-flag .pagination .current {
+  @apply bg-scooter-500;
+}
+
+.uniliga-flag .newsletterFooter .newsletterFooter__content {
+  @apply bg-scooter-500 w-full p-5 rounded-br-md md:absolute bottom-0 md:-bottom-28;
 }

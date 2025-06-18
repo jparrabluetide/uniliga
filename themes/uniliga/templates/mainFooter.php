@@ -26,6 +26,9 @@
           <li>
             <a href="/baloncesto" class="text-white text-base">Baloncesto</a>
           </li>
+          <li>
+            <a href="/futbol" class="text-white text-base">Fútbol</a>
+          </li>
         </ul>
         <div class="w-full h-[1px] bg-scooter-500 my-4"></div>
         <div class="text-white">
