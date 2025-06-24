@@ -74,6 +74,47 @@ function bluetide_widgets_init()
 }
 add_action('widgets_init', 'bluetide_widgets_init');
 
+
+/**
+ * Remove the version number from the RSS feed.
+ *
+ * @return string Empty string
+ */
+function wordpress_remove_version()
+{
+  return '';
+}
+add_filter('the_generator', 'wordpress_remove_version');
+
+
+/**
+ * Return a generic error message instead of the default WordPress error message, which can reveal version information.
+ *
+ * @return string
+ */
+function no_wordpress_errors()
+{
+  return 'Something is wrong!';
+}
+add_filter('login_errors', 'no_wordpress_errors');
+
+
+/**
+ * Remove the X-Powered-By header from the HTTP response.
+ *
+ * @param array $headers Associative array of HTTP headers.
+ * @return array The modified array of HTTP headers.
+ */
+function remove_x_powered_by($headers)
+{
+  unset($headers['X-Powered-By']);
+  return $headers;
+}
+
+add_filter('wp_headers', 'remove_x_powered_by');
+
+
+
 function bluetide_styles_scripts()
 {
 
