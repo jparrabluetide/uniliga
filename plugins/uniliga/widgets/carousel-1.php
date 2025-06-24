@@ -140,9 +140,9 @@ class BluetideElementorCarousel extends Widget_Base
                         <?php echo $slide[$prefix . 'slider_bullet_text']; ?>
                       </p>
                     </div>
-                    <h1 class="text-2xl lg:text-5xl font-family-oswald text-white uppercase max-w-[440px] mb-5">
+                    <h2 class="text-2xl lg:text-5xl font-family-oswald text-white uppercase max-w-[440px] mb-5">
                       <?php echo $slide[$prefix . 'slider_title']; ?>
-                    </h1>
+                    </h2>
                     <?php if ($slide[$prefix . 'slider_date'] || $slide[$prefix . 'slider_location']) : ?>
                       <div class="flex items-center gap-3 md:gap-6 mb-5">
                         <div class="flex items-center gap-2">

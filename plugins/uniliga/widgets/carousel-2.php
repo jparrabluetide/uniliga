@@ -103,9 +103,9 @@ class BluetideElementorCarousel2 extends Widget_Base
                     <p>></p>
                     <p><?php echo get_the_title($post->ID); ?></p>
                   </div>
-                  <h1 class="font-family-oswald text-lg md:text-4xl lg:text-5xl text-white uppercase font-medium">
+                  <h3 class="font-family-oswald text-lg md:text-4xl lg:text-5xl text-white uppercase font-medium">
                     <?php echo $slide[$prefix . 'slider_title']; ?>
-                  </h1>
+                  </h3>
                 </div>
               </div>
             </div>

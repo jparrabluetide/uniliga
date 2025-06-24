@@ -8,9 +8,9 @@
               <div class="badge-sport">
                 <p class="font-family-roboto text-sm uppercase text-tarawera-950">Fútbol</p>
               </div>
-              <h1 class="text-2xl lg:text-5xl font-family-oswald text-white uppercase max-w-[440px] mb-5">
+              <h2 class="text-2xl lg:text-5xl font-family-oswald text-white uppercase max-w-[440px] mb-5">
                 Lorem ipsum dolor sit amet consectetur
-              </h1>
+              </h2>
               <div class="flex items-center gap-3 md:gap-6 mb-5">
                 <div class="flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
@@ -64,9 +64,9 @@
               <div class="badge-sport">
                 <p class="font-family-roboto text-sm uppercase text-tarawera-950">Fútbol</p>
               </div>
-              <h1 class="text-2xl lg:text-5xl font-family-oswald text-white uppercase max-w-[440px] mb-5">
+              <h2 class="text-2xl lg:text-5xl font-family-oswald text-white uppercase max-w-[440px] mb-5">
                 Lorem ipsum dolor sit amet consectetur
-              </h1>
+              </h2>
               <div class="flex items-center gap-3 md:gap-6 mb-5">
                 <div class="flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
