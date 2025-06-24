@@ -20,7 +20,7 @@ function bluetide_fields_highlight()
     array(
       'id' => $prefix . 'icon',
       'name' => esc_html__('Image icon', 'bluetide'),
-      'desc' => esc_html__('Add an image.', 'bluetide'),
+      'desc' => esc_html__('Add an image', 'bluetide'),
       'type' => 'file',
       'attributes' => array(
         'required' => 'required',
@@ -43,7 +43,7 @@ function bluetide_fields_highlight()
     array(
       'id' => $prefix . 'youtube_id',
       'name' => esc_html__('Youtube ID', 'bluetide'),
-      'desc' => esc_html__('Add a Youtube ID.', 'bluetide'),
+      'desc' => esc_html__('Add a Youtube ID', 'bluetide'),
       'type' => 'text_small',
       'attributes' => array(
         'required' => 'required',

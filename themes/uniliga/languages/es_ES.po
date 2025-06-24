@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress - 6.7.x - Development\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-18 12:04-0500\n"
+"PO-Revision-Date: 2025-06-24 11:21-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -12,82 +12,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #. translators: Weekday.
-msgid "Saturday"
+msgid "saturday"
 msgstr "sábado"
 
 #. translators: Weekday.
-msgid "Friday"
+msgid "friday"
 msgstr "viernes"
 
 #. translators: Weekday.
-msgid "Thursday"
+msgid "thursday"
 msgstr "jueves"
 
 #. translators: Weekday.
-msgid "Wednesday"
+msgid "wednesday"
 msgstr "miércoles"
 
 #. translators: Weekday.
-msgid "Tuesday"
+msgid "tuesday"
 msgstr "martes"
 
 #. translators: Weekday.
-msgid "Monday"
+msgid "monday"
 msgstr "lunes"
 
 #. translators: Weekday.
-msgid "Sunday"
+msgid "sunday"
 msgstr "domingo"
 
 #. translators: Month name.
-msgid "December"
+msgid "december"
 msgstr "diciembre"
 
 #. translators: Month name.
-msgid "November"
+msgid "november"
 msgstr "noviembre"
 
 #. translators: Month name.
-msgid "October"
+msgid "october"
 msgstr "octubre"
 
 #. translators: Month name.
-msgid "September"
+msgid "september"
 msgstr "septiembre"
 
 #. translators: Month name.
-msgid "August"
+msgid "august"
 msgstr "agosto"
 
 #. translators: Month name.
-msgid "July"
+msgid "july"
 msgstr "julio"
 
 #. translators: Month name.
-msgid "June"
+msgid "june"
 msgstr "junio"
 
 #. translators: Month name.
-msgid "May"
+msgid "may"
 msgstr "mayo"
 
 #. translators: Month name.
-msgid "April"
+msgid "april"
 msgstr "abril"
 
 #. translators: Month name.
-msgid "March"
+msgid "march"
 msgstr "marzo"
 
 #. translators: Month name.
-msgid "February"
+msgid "february"
 msgstr "febrero"
 
 #. translators: Month name.
-msgid "January"
+msgid "january"
 msgstr "enero"
 
 msgid "Uncategorized"
@@ -172,3 +172,149 @@ msgstr "Oops! La página no fue encontrada."
 msgid "It looks like nothing was found at this location."
 msgstr "Lo que buscas no fue encontrado en esta página."
 
+#. Traduccion de plantilla.
+#. Traduccion de noticias.
+msgid "New"
+msgstr "Noticia"
+
+msgid "new"
+msgstr "noticia"
+
+msgid "News"
+msgstr "Noticias"
+
+msgid "All news"
+msgstr "Todas las noticias"
+
+msgid "Add new new"
+msgstr "Agregar nueva noticia"
+
+msgid "Edit new"
+msgstr "Editar noticia"
+
+msgid "Update new"
+msgstr "Actualizar noticia"
+
+msgid "View new"
+msgstr "Ver noticia"
+
+msgid "View news"
+msgstr "Ver noticias"
+
+msgid "Search news"
+msgstr "Buscar noticias"
+
+msgid "No news found"
+msgstr "Noticias no econtradas"
+
+msgid "No new found"
+msgstr "Noticia no econtrada"
+
+msgid "No news found in the trash"
+msgstr "No se encontraron noticias en la papelera"
+
+#. Traduccion de galeria.
+msgid "Gallery"
+msgstr "Galería"
+
+msgid "gallery"
+msgstr "galería"
+
+msgid "Galleries"
+msgstr "Galerías"
+
+msgid "All galleries"
+msgstr "Todas las galerías"
+
+msgid "Add gallery"
+msgstr "Agregar galería"
+
+msgid "Add new gallery"
+msgstr "Agregar nueva galería"
+
+msgid "Edit gallery"
+msgstr "Editar galería"
+
+msgid "Update gallery"
+msgstr "Actualizar galería"
+
+msgid "View gallery"
+msgstr "Ver galería"
+
+msgid "View galleries"
+msgstr "Ver galerías"
+
+msgid "Search galleries"
+msgstr "Buscar galerías"
+
+msgid "No galleries found"
+msgstr "Galerías no econtradas"
+
+msgid "No gallery found"
+msgstr "Galería no econtrada"
+
+msgid "No galleries found in the trash"
+msgstr "No se encontraron galerías en la papelera"
+
+#. Traduccion de elementos de galeria.
+msgid "Gallery info"
+msgstr "Información de galería"
+
+msgid "Leagues"
+msgstr "Ligas"
+
+#. Traduccion de destacados.
+msgid "Highlight"
+msgstr "Destacado"
+
+msgid "highlight"
+msgstr "destacado"
+
+msgid "Highlights"
+msgstr "Destacados"
+
+msgid "All highlights"
+msgstr "Todos los destacados"
+
+msgid "Add highlight"
+msgstr "Agregar destacado"
+
+msgid "Add new highlight"
+msgstr "Agregar nuevo destacado"
+
+msgid "Edit highlight"
+msgstr "Editar destacado"
+
+msgid "Update highlight"
+msgstr "Actualizar destacado"
+
+msgid "View highlight"
+msgstr "Ver destacado"
+
+msgid "View highlights"
+msgstr "Ver destacados"
+
+msgid "Search highlights"
+msgstr "Buscar destacados"
+
+msgid "No highlights found"
+msgstr "Destacados no econtrados"
+
+msgid "No highlight found"
+msgstr "Destacado no econtrado"
+
+msgid "No highlights found in the trash"
+msgstr "No se encontraron destacados en la papelera"
+
+#. Traduccion de elementos de destacados.
+msgid "highlight info"
+msgstr "Información de destacado"
+
+msgid "Image icon"
+msgstr "Imágen de ícono"
+
+msgid "Add an image"
+msgstr "Agrega una imágen"
+
+msgid "Add a Youtube ID"
+msgstr "Agrega una id de Youtube"
