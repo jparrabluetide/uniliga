@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress - 6.7.x - Development\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-24 11:21-0500\n"
+"PO-Revision-Date: 2025-06-24 12:02-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -114,6 +114,9 @@ msgstr "Paginación de comentarios"
 
 msgid "Posts pagination"
 msgstr "Paginación de entradas"
+
+msgid "No posts found"
+msgstr "No se encontraron posts"
 
 #. translators: %s: Template name.
 msgid "Template \"%s\" is not registered."
