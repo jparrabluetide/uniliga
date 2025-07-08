@@ -29,6 +29,9 @@
           <li>
             <a href="/futbol" class="text-white text-base">Fútbol</a>
           </li>
+          <li>
+            <a href="/flag" class="text-white text-base">Flag</a>
+          </li>
         </ul>
         <div class="w-full h-[1px] bg-scooter-500 my-4"></div>
         <div class="text-white">
@@ -57,7 +60,7 @@
             <?php while ($data->have_posts()): $data->the_post(); ?>
               <div class="col-span-1 w-[84px] h-[84px] md:w-[64px] md:h-[64px] 2xl:w-[84px] 2xl:h-[84px] bg-gray-200">
                 <a href="<?php echo get_the_post_thumbnail_url(); ?>" class="w-full h-full block" data-lightbox="gallery-1_1" data-title="<?php echo get_the_title($data->ID); ?>">
-                  <img src="<?php echo get_the_post_thumbnail_url($data->ID, 'gallery1-card'); ?>" class="w-full h-full object-cover" alt="<?php the_title(); ?>" />
+                  <img src="<?php echo get_the_post_thumbnail_url($data->ID, 'gallery1-card'); ?>" loading="lazy" class="w-full h-full object-cover" alt="<?php the_title(); ?>" />
                 </a>
               </div>
             <?php endwhile; ?>

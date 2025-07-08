@@ -101,6 +101,7 @@
   </div>
   <div class="w-full py-12">
     <?php
+    /*
     if (class_exists('SponsorsWidget')) {
       the_widget(
         'SponsorsWidget',
@@ -109,6 +110,7 @@
         )
       );
     }
+      */
     ?>
   </div>
 </div>

@@ -131,7 +131,7 @@ class BluetideElementorCarousel extends Widget_Base
       <div class="swiper-wrapper">
         <?php foreach ($settings[$prefix . 'slider'] as $slide) : ?>
           <div class="swiper-slide">
-            <div class="w-full h-carousel1 bg-gray-400 bg-cover bg-no-repeat" style="background-image: url('<?php echo $slide[$prefix . 'slider_bg']['url']; ?>');">
+            <div class="w-full h-carousel1 bg-gray-400 bg-cover bg-no-repeat min-h-[614px]" style="background-image: url('<?php echo $slide[$prefix . 'slider_bg']['url']; ?>');">
               <div class="container h-full mx-auto px-4">
                 <div class="w-full h-full flex items-center">
                   <div class="">
