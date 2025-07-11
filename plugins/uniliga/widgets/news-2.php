@@ -50,7 +50,7 @@ class NewsWidget2 extends WP_Widget
                     <?php echo get_the_title($firstPost->ID); ?>
                   </h4>
                   <a href="<?php echo get_the_permalink($firstPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
-                    Ver highlights
+                    Ver más
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
                         <path fill="#D9D9D9" d="M0 0h24v24H0z" />
@@ -81,7 +81,7 @@ class NewsWidget2 extends WP_Widget
                     <?php echo get_the_title($secondPost->ID); ?>
                   </h4>
                   <a href="<?php echo get_the_permalink($secondPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
-                    Ver highlights
+                    Ver más
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
                         <path fill="#D9D9D9" d="M0 0h24v24H0z" />
@@ -110,7 +110,7 @@ class NewsWidget2 extends WP_Widget
                     <?php echo get_the_title($thirdPost->ID); ?>
                   </h4>
                   <a href="<?php echo get_the_permalink($thirdPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
-                    Ver highlights
+                    Ver más
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
                         <path fill="#D9D9D9" d="M0 0h24v24H0z" />
