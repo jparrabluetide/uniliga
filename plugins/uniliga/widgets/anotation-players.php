@@ -17,48 +17,86 @@ class AnotationPayersWidget extends WP_Widget
   public function widget($args, $instance)
   {
 
-    $args = array(
-      'post_type'      => 'sp_player',
-      'post_status'    => 'publish',
-      'orderby'        => 'date',
-      'order'          => 'DESC',
-      'posts_per_page' => $instance['numberPost'] ?? 5,
+    $args_all_players = array(
+      'post_type' => 'sp_player',
+      'post_status' => 'publish',
+      'posts_per_page' => -1,
     );
-
-    // Solo añadir tax_query si leagueId tiene valor y no es -1
     if (!empty($instance['leagueId']) && $instance['leagueId'] != -1) {
-      $args['tax_query'] = array(
+      $args_all_players['tax_query'] = array(
         array(
           'taxonomy' => 'sp_league',
-          'field'    => 'id',
-          'terms'    => $instance['leagueId']
+          'field' => 'id',
+          'terms' => $instance['leagueId']
         )
       );
     }
+    $all_players_query = new WP_Query($args_all_players);
 
-    $data = new WP_Query($args);
-?>
+    $players_with_stats = array();
+
+    if ($all_players_query->have_posts()) {
+      while ($all_players_query->have_posts()) {
+        $all_players_query->the_post();
+
+        // Obtener el array de estadísticas del jugador
+        $player_stats = get_post_meta(get_the_ID(), 'sp_statistics', true);
+
+        // NAVEGAMOS EN EL ARRAY PARA ENCONTRAR LOS PUNTOS
+        $player_points = 0; // Inicializamos los puntos a 0 por si no se encuentran
+        if (is_array($player_stats) && !empty($player_stats)) {
+
+          foreach ($player_stats as $stat_group) {
+            if (is_array($stat_group)) {
+              foreach ($stat_group as $stats_array) {
+                if (is_array($stats_array) && isset($stats_array['points'])) {
+                  // Sumamos los puntos si se encuentran
+                  $player_points += (float) $stats_array['points'];
+                }
+              }
+            }
+          }
+        }
+
+        $players_with_stats[] = array(
+          'post_id' => get_the_ID(),
+          'points' => $player_points,
+        );
+      }
+      wp_reset_postdata();
+    }
+
+    // Ordenar el nuevo array por puntos (de mayor a menor)
+    usort($players_with_stats, function ($a, $b) {
+      return $b['points'] <=> $a['points'];
+    });
+
+    //Limitar el resultado a 5, según tu configuración original
+    $top_players = array_slice($players_with_stats, 0, $instance['numberPost'] ?? 5);
+
+    ?>
     <div class="w-full">
-      <?php if ($data->have_posts()): ?>
+      <?php if (!empty($top_players)): ?>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          <?php while ($data->have_posts()):
-            $data->the_post();
-            $dataId = get_the_ID();
-            $teams  = array_unique(get_post_meta($dataId, 'sp_team'));
-            $teamName = get_the_title($teams[0]);
-          ?>
+          <?php foreach ($top_players as $player):
+            $player_post = get_post($player['post_id']);
+            $dataId = $player_post->ID;
+            $team_id = get_post_meta($dataId, 'sp_team', true);
+            $teamName = get_the_title($team_id);
+            ?>
             <div class="col-span-1">
               <div class="w-full bg-gray-300 h-[340px] md:h-[280px]">
-                <img src="<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>" alt="<?php the_title(); ?>" class="w-full !h-full object-cover object-top" />
+                <img src="<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>" alt="<?php echo get_the_title($dataId); ?>"
+                  class="w-full !h-full object-cover object-top" />
               </div>
               <div class="bg-gradient-to-b-mainColor py-4 px-4">
-                <h4 class="text-lg font-family-oswald text-white"><?php the_title(); ?></h4>
+                <h4 class="text-lg font-family-oswald text-white"><?php echo get_the_title($dataId); ?></h4>
                 <p class="text-sm font-family-roboto text-white">
                   <?php echo $teamName; ?>
                 </p>
               </div>
             </div>
-          <?php endwhile; ?>
+          <?php endforeach; ?>
           <?php wp_reset_postdata(); ?>
         </div>
       <?php else: ?>
@@ -67,7 +105,7 @@ class AnotationPayersWidget extends WP_Widget
         </div>
       <?php endif; ?>
     </div>
-  <?php
+    <?php
   }
 
   public function update($new_instance, $old_instance)
@@ -92,7 +130,7 @@ class AnotationPayersWidget extends WP_Widget
         'hide_empty' => false, // Para incluir ligas sin eventos asociados (opcional)
       )
     );
-  ?>
+    ?>
     <p>
       <label for="<?php echo $this->get_field_id('numberPost'); ?>">
         <?php _e('Number of posts'); ?>:
@@ -103,14 +141,16 @@ class AnotationPayersWidget extends WP_Widget
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('leagueId'); ?>"><?php _e('Leagues:', 'bluetide'); ?></label>
-      <select class="widefat" id="<?php echo $this->get_field_id('leagueId'); ?>" name="<?php echo $this->get_field_name('leagueId'); ?>">
+      <select class="widefat" id="<?php echo $this->get_field_id('leagueId'); ?>"
+        name="<?php echo $this->get_field_name('leagueId'); ?>">
         <option value="-1" <?php echo ($leagueId == -1) ? 'selected' : ''; ?>><?php _e('All', 'bluetide'); ?></option>
-        <?php foreach ($leagues as $league) : $selected = ($league->term_id == $leagueId) ? 'selected' : ''; ?>
+        <?php foreach ($leagues as $league):
+          $selected = ($league->term_id == $leagueId) ? 'selected' : ''; ?>
           <option value="<?php echo $league->term_id; ?>" <?php echo $selected; ?>><?php echo $league->name; ?></option>
         <?php endforeach; ?>
       </select>
     </p>
-<?php
+    <?php
   }
 }
 
