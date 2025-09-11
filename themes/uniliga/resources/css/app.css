@@ -1,1 +1,48 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-cyan-50: #dff8ff;
+  --color-cyan-100: #c4f3ff;
+  --color-cyan-200: #6ee8fe;
+  --color-cyan-300: #16d4ed;
+  --color-cyan-400: #13bfd6;
+  --color-cyan-500: #0d9caf;
+  --color-cyan-600: #087b8a;
+  --color-cyan-700: #055e6a;
+  --color-cyan-800: #024048;
+  --color-cyan-900: #012429;
+  --color-cyan-950: #00161a;
+  --color-cyan-alpha-40: rgba(0, 190, 214, 0.4);
+
+  --font-family-inter: 'Inter', sans-serif;
+}
+
+/*Utilidades*/
+
+.hidden-important {
+  @apply !hidden;
+}
+
+#main-menu ul {
+  @apply flex gap-4 text-white font-family-inter uppercase font-bold text-sm;
+}
+
+#main-menu ul .current-menu-item {
+  @apply text-cyan-400;
+}
+
+#btn-mobile-menu .elementor-icon-wrapper {
+  @apply w-[30px] h-[30px];
+}
+
+#mobile-main-menu ul {
+  @apply text-white font-family-inter uppercase font-bold text-base text-right pb-4;
+}
+
+#mobile-main-menu ul li {
+  @apply py-1;
+}
+
+#mobile-main-menu ul .current-menu-item {
+  @apply text-cyan-400;
+}

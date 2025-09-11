@@ -7,7 +7,9 @@
     "dev": "mix",
     "watch": "mix watch",
     "hot": "mix watch --hot",
-    "prod": "mix --production"
+    "prod": "mix --production",
+    "build:styles": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./public/css/app.css --watch",
+    "prod:styles": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./public/css/app.css --minify"
   },
   "keywords": [],
   "author": "",

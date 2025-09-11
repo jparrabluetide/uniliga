@@ -2,13 +2,15 @@ let mix = require('laravel-mix')
 
 mix
   .js('resources/js/app.js', 'public/js')
+  /*
   .postCss('resources/css/app.css', 'public/css', [
     require('@tailwindcss/postcss')
   ])
+    */
   .webpackConfig({
     externals: {
       jquery: 'jQuery' // Le dice a Webpack que no empaquete 'jquery', sino que espere que 'jQuery' exista globalmente.
-    }
+    },
   })
   .sourceMaps()
 
