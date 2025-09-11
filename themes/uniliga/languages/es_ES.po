@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress - 6.7.x - Development\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-10 17:57-0500\n"
+"PO-Revision-Date: 2025-09-11 12:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -220,8 +220,6 @@ msgstr "No se encontró la plantilla en la basura"
 msgid "Insert to template"
 msgstr "Insertar a la plantilla"
 
-
-
 #. Traduccion de plantilla.
 #. Traduccion de noticias.
 msgid "New"
@@ -368,4 +366,3 @@ msgstr "Agrega una imágen"
 
 msgid "Add a Youtube ID"
 msgstr "Agrega una id de Youtube"
-
