@@ -140,6 +140,7 @@ $RECYCLE.BIN/
 #/wp-content/themes
 /themes/uniliga/node_modules/
 /themes/uniliga/public/
+/themes/uniliga-v1.0/
 /plugins/uniliga/libs/
 
 
