@@ -1,0 +1,371 @@
+# Translation of WordPress - 6.7.x - Development in Spanish (Spain)
+# This file is distributed under the same license as the WordPress - 6.7.x - Development package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress - 6.7.x - Development\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-09-10 17:57-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.7\n"
+
+#. translators: Weekday.
+msgid "saturday"
+msgstr "sábado"
+
+#. translators: Weekday.
+msgid "friday"
+msgstr "viernes"
+
+#. translators: Weekday.
+msgid "thursday"
+msgstr "jueves"
+
+#. translators: Weekday.
+msgid "wednesday"
+msgstr "miércoles"
+
+#. translators: Weekday.
+msgid "tuesday"
+msgstr "martes"
+
+#. translators: Weekday.
+msgid "monday"
+msgstr "lunes"
+
+#. translators: Weekday.
+msgid "sunday"
+msgstr "domingo"
+
+#. translators: Month name.
+msgid "december"
+msgstr "diciembre"
+
+#. translators: Month name.
+msgid "november"
+msgstr "noviembre"
+
+#. translators: Month name.
+msgid "october"
+msgstr "octubre"
+
+#. translators: Month name.
+msgid "september"
+msgstr "septiembre"
+
+#. translators: Month name.
+msgid "august"
+msgstr "agosto"
+
+#. translators: Month name.
+msgid "july"
+msgstr "julio"
+
+#. translators: Month name.
+msgid "june"
+msgstr "junio"
+
+#. translators: Month name.
+msgid "may"
+msgstr "mayo"
+
+#. translators: Month name.
+msgid "april"
+msgstr "abril"
+
+#. translators: Month name.
+msgid "march"
+msgstr "marzo"
+
+#. translators: Month name.
+msgid "february"
+msgstr "febrero"
+
+#. translators: Month name.
+msgid "january"
+msgstr "enero"
+
+msgid "Uncategorized"
+msgstr "Sin categoría"
+
+msgid "categories"
+msgstr "categorías"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "All categories"
+msgstr "Todas las categorías"
+
+msgid "Add new category"
+msgstr "Agregar categoría"
+
+msgctxt "block title"
+msgid "Terms List"
+msgstr "Lista de términos"
+
+msgid "Comments pagination"
+msgstr "Paginación de comentarios"
+
+msgid "Posts pagination"
+msgstr "Paginación de entradas"
+
+msgid "No posts found"
+msgstr "No se encontraron posts"
+
+#. translators: %s: Template name.
+msgid "Template \"%s\" is not registered."
+msgstr "La plantilla «%s» no está registrada."
+
+msgctxt "block title"
+msgid "Read More"
+msgstr "Leer más"
+
+msgctxt "block title"
+msgid "No results"
+msgstr "Sin resultados"
+
+msgid "Item Archives"
+msgstr "Archivo de elementos"
+
+msgid "Item Attributes"
+msgstr "Elemento de atributos"
+
+msgid "Parent Item"
+msgstr "Elemento padre"
+
+msgid "Add new"
+msgstr "Agregar nuevo"
+
+msgid "Featured image"
+msgstr "Imágen destacada"
+
+msgid "Add featured image"
+msgstr "Agregar imágen destacada"
+
+msgid "Remove featured image"
+msgstr "Remover imágen destacada"
+
+msgid "Use as featured image"
+msgstr "Usar como imágen destacada"
+
+msgid "Excerpt"
+msgstr "Extracto"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Add icon"
+msgstr "Agregar icono"
+
+msgid "Add image"
+msgstr "Agregar imagen"
+
+msgid "Image photo"
+msgstr "Imágen de foto"
+
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! La página no fue encontrada."
+
+msgid "It looks like nothing was found at this location."
+msgstr "Lo que buscas no fue encontrado en esta página."
+
+msgid "Templates"
+msgstr "Plantillas"
+
+msgid "Template"
+msgstr "Plantilla"
+
+msgid "All templates"
+msgstr "Todas las plantillas"
+
+msgid "Add new template"
+msgstr "Agrega nueva plantilla"
+
+msgid "Search templates"
+msgstr "Buscar plantillas"
+
+msgid "Template Elementor"
+msgstr "Plantillas para Elementor"
+
+msgid "New template"
+msgstr "Nueva plantilla"
+
+msgid "Edit template"
+msgstr "Editar plantilla"
+
+msgid "Update template"
+msgstr "Actualizar plantilla"
+
+msgid "Delete template"
+msgstr "Eliminar plantilla"
+
+msgid "View template"
+msgstr "Ver plantilla"
+
+msgid "View templates"
+msgstr "Ver plantillas"
+
+msgid "No template found"
+msgstr "No se encontró la plantilla"
+
+msgid "No templates found in the trash"
+msgstr "No se encontró la plantilla en la basura"
+
+msgid "Insert to template"
+msgstr "Insertar a la plantilla"
+
+
+
+#. Traduccion de plantilla.
+#. Traduccion de noticias.
+msgid "New"
+msgstr "Noticia"
+
+msgid "new"
+msgstr "noticia"
+
+msgid "News"
+msgstr "Noticias"
+
+msgid "All news"
+msgstr "Todas las noticias"
+
+msgid "Add new new"
+msgstr "Agregar nueva noticia"
+
+msgid "Edit new"
+msgstr "Editar noticia"
+
+msgid "Update new"
+msgstr "Actualizar noticia"
+
+msgid "View new"
+msgstr "Ver noticia"
+
+msgid "View news"
+msgstr "Ver noticias"
+
+msgid "Search news"
+msgstr "Buscar noticias"
+
+msgid "No news found"
+msgstr "Noticias no econtradas"
+
+msgid "No new found"
+msgstr "Noticia no econtrada"
+
+msgid "No news found in the trash"
+msgstr "No se encontraron noticias en la papelera"
+
+#. Traduccion de galeria.
+msgid "Gallery"
+msgstr "Galería"
+
+msgid "gallery"
+msgstr "galería"
+
+msgid "Galleries"
+msgstr "Galerías"
+
+msgid "All galleries"
+msgstr "Todas las galerías"
+
+msgid "Add gallery"
+msgstr "Agregar galería"
+
+msgid "Add new gallery"
+msgstr "Agregar nueva galería"
+
+msgid "Edit gallery"
+msgstr "Editar galería"
+
+msgid "Update gallery"
+msgstr "Actualizar galería"
+
+msgid "View gallery"
+msgstr "Ver galería"
+
+msgid "View galleries"
+msgstr "Ver galerías"
+
+msgid "Search galleries"
+msgstr "Buscar galerías"
+
+msgid "No galleries found"
+msgstr "Galerías no econtradas"
+
+msgid "No gallery found"
+msgstr "Galería no econtrada"
+
+msgid "No galleries found in the trash"
+msgstr "No se encontraron galerías en la papelera"
+
+#. Traduccion de elementos de galeria.
+msgid "Gallery info"
+msgstr "Información de galería"
+
+msgid "Leagues"
+msgstr "Ligas"
+
+#. Traduccion de destacados.
+msgid "Highlight"
+msgstr "Destacado"
+
+msgid "highlight"
+msgstr "destacado"
+
+msgid "Highlights"
+msgstr "Destacados"
+
+msgid "All highlights"
+msgstr "Todos los destacados"
+
+msgid "Add highlight"
+msgstr "Agregar destacado"
+
+msgid "Add new highlight"
+msgstr "Agregar nuevo destacado"
+
+msgid "Edit highlight"
+msgstr "Editar destacado"
+
+msgid "Update highlight"
+msgstr "Actualizar destacado"
+
+msgid "View highlight"
+msgstr "Ver destacado"
+
+msgid "View highlights"
+msgstr "Ver destacados"
+
+msgid "Search highlights"
+msgstr "Buscar destacados"
+
+msgid "No highlights found"
+msgstr "Destacados no econtrados"
+
+msgid "No highlight found"
+msgstr "Destacado no econtrado"
+
+msgid "No highlights found in the trash"
+msgstr "No se encontraron destacados en la papelera"
+
+#. Traduccion de elementos de destacados.
+msgid "highlight info"
+msgstr "Información de destacado"
+
+msgid "Image icon"
+msgstr "Imágen de ícono"
+
+msgid "Add an image"
+msgstr "Agrega una imágen"
+
+msgid "Add a Youtube ID"
+msgstr "Agrega una id de Youtube"
+
