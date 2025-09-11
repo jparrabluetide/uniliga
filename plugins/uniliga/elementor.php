@@ -127,6 +127,27 @@ final class bluetideWidgets
     add_action('elementor/widgets/widgets_registered', [$this, 'init_widgets']);
   }
 
+   /**
+   * Corrige el template de vista previa para Elementor.
+  *
+  * @param string $template La ruta del archivo de plantilla.
+  * @return string La ruta del nuevo archivo de plantilla.
+  */
+  public function template_fix($template)
+  {
+    $current_cpt = 'bluetide_template';
+
+    if (is_singular($current_cpt) && Elementor\Plugin::instance()->editor->is_edit_mode()) {
+      $new_template = BLUETIDE_PLUGIN_PATH . 'includes/elementor-preview-template.php';
+
+      if (file_exists($new_template)) {
+        return $new_template;
+      }
+    }
+
+    return $template;
+  }
+
   /**
    * Initialize the widgets
    */
