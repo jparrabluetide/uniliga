@@ -1,6 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
+  /*Sport colors*/
+  --color-voley: #00bed6;
+  --color-basket: #ed6a1c;
+  --color-football: #fab52f;
+  --color-flag: #00D6A0;
+
   --color-cyan-50: #dff8ff;
   --color-cyan-100: #c4f3ff;
   --color-cyan-200: #6ee8fe;
@@ -95,13 +101,14 @@
 
 @import './utilities.css';
 
+@import './badges.css';
+@import './modal.css';
+
 @import './header.css';
 @import './footer.css';
-
-@import './modal.css';
 
 @import './highlights.css';
 @import './newsletter.css';
 @import './sponsors.css';
-@import './badges.css';
+@import './news.css';
 

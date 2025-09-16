@@ -1,0 +1,75 @@
+.news__grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 lg:min-h-[700px];
+}
+
+.news__cell-1 {
+  @apply lg:row-span-2;
+}
+
+.news__cell-4 {
+  @apply lg:col-start-2;
+}
+
+.news__cell-5 {
+  @apply lg:col-start-3;
+}
+
+.news__bgImage {
+  @apply w-full h-full bg-cover bg-no-repeat rounded-2xl;
+}
+
+.news__container {
+  @apply w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 pt-6 rounded-b-2xl;
+}
+
+.news__title {
+  @apply text-white font-family-inter font-bold text-xl mb-2;
+}
+
+.news__cell-1 .news__title {
+  @apply text-xl lg:text-3xl;
+}
+
+.news__link {
+  @apply flex items-center gap-2 text-sm md:text-base font-semibold uppercase font-family-inter;
+}
+
+.news__sport-futbol .news__link {
+  @apply text-football;
+}
+
+.news__sport-futbol .badge-sport {
+  @apply bg-football;
+}
+
+.news__sport-flag .news__link {
+  @apply text-flag;
+}
+
+.news__sport-flag .badge-sport {
+  @apply bg-flag;
+}
+
+.news__sport-baloncesto .news__link {
+  @apply text-basket;
+}
+
+.news__sport-baloncesto .badge-sport {
+  @apply bg-basket;
+}
+
+.news__sport-voley .news__link {
+  @apply text-voley;
+}
+
+.news__sport-voley .badge-sport {
+  @apply bg-voley;
+}
+
+.news__sport-futbol .news__link {
+  @apply text-football;
+}
+
+.news__sport-futbol .badge-sport {
+  @apply bg-football;
+}

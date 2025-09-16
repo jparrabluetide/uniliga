@@ -25,38 +25,40 @@ class NewsWidget extends WP_Widget
         'posts_per_page' => $instance['numberPost'] ?? 5,
       )
     );
-?>
+    ?>
 
     <div class="news">
       <?php if ($data->have_posts()): ?>
-        <div class="grid grid-cols-5 grid-rows-4 lg:grid-rows-2 gap-4 w-full">
+        <div class="news__grid">
           <?php
           $posts = $data->posts;
           ?>
-          <div class="col-span-5 lg:col-span-2 lg:row-span-2 bg-gray-200 w-full h-full relative">
+          <div class="news__cell-1">
             <?php
             if (count($posts) > 0):
               $firstPost = $posts[0];
               $categoriesForFirstPost = get_the_category($firstPost->ID);
-            ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
-                  <a href="#" class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+              ?>
+              <div class="news__bgImage"
+                style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
+                <div class="news__container bg-gradient-to-t-mainColor news__sport-<?php echo sanitize_title($categoriesForFirstPost[0]->name); ?>">
+                  <a href="#" class="badge-sport ">
+                    <span class="">
                       <?php echo $categoriesForFirstPost[0]->name; ?>
                     </span>
                   </a>
-                  <h4 class="text-lg md:text-2xl lg:text-4xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
+                  <h4 class="news__title">
                     <?php echo get_the_title($firstPost->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_permalink($firstPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_permalink($firstPost->ID); ?>"
+                    class="news__link">
                     Ver más
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
                         <path fill="#D9D9D9" d="M0 0h24v24H0z" />
                       </mask>
                       <g mask="url(#a)">
-                        <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                        <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
                       </g>
                     </svg>
                   </a>
@@ -64,59 +66,32 @@ class NewsWidget extends WP_Widget
               </div>
             <?php endif; ?>
           </div>
-          <div class="col-span-5 lg:col-span-2">
+          <div class="news__cell-2">
             <?php
             if (count($posts) > 1):
               $secondPost = $posts[1];
               $categoriesForSecondPost = get_the_category($secondPost->ID);
-            ?>
-              <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($secondPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
-                  <a href="#" class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+              ?>
+              <div class="news__bgImage mb-4"
+                style="background-image: url(<?php echo get_the_post_thumbnail_url($secondPost->ID, 'large'); ?>)">
+                <div class="news__container bg-gradient-to-t-mainColor news__sport-<?php echo sanitize_title($categoriesForSecondPost[0]->name); ?>">
+                  <a href="#" class="badge-sport ">
+                    <span class="">
                       <?php echo $categoriesForSecondPost[0]->name; ?>
                     </span>
                   </a>
-                  <h4 class="text-lg md:text-2xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
+                  <h4 class="news__title">
                     <?php echo get_the_title($secondPost->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_permalink($secondPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_permalink($secondPost->ID); ?>"
+                    class="news__link">
                     Ver más
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
                         <path fill="#D9D9D9" d="M0 0h24v24H0z" />
                       </mask>
                       <g mask="url(#a)">
-                        <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            <?php endif; ?>
-            <?php
-            if (count($posts) > 2):
-              $thirdPost = $posts[2];
-              $categoriesForThirdPost = get_the_category($thirdPost->ID);
-            ?>
-              <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($thirdPost->ID, 'large'); ?>)">
-                <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
-                  <a href="#" class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
-                      <?php echo $categoriesForThirdPost[0]->name; ?>
-                    </span>
-                  </a>
-                  <h4 class="text-lg md:text-2xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
-                    <?php echo get_the_title($thirdPost->ID); ?>
-                  </h4>
-                  <a href="<?php echo get_the_permalink($thirdPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
-                    Ver más
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                      <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
-                        <path fill="#D9D9D9" d="M0 0h24v24H0z" />
-                      </mask>
-                      <g mask="url(#a)">
-                        <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                        <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
                       </g>
                     </svg>
                   </a>
@@ -124,65 +99,104 @@ class NewsWidget extends WP_Widget
               </div>
             <?php endif; ?>
           </div>
-          <div class="col-span-5 lg:col-span-1">
-            <?php 
+          <div class="news__cell-3">
+            <?php
+            if (count($posts) > 2):
+              $thirdPost = $posts[2];
+              $categoriesForThirdPost = get_the_category($thirdPost->ID);
+              ?>
+              <div class="news__bgImage"
+                style="background-image: url(<?php echo get_the_post_thumbnail_url($thirdPost->ID, 'large'); ?>)">
+                <div class="news__container bg-gradient-to-t-mainColor news__sport-<?php echo sanitize_title($categoriesForThirdPost[0]->name); ?>">
+                  <a href="#" class="badge-sport ">
+                    <span class="">
+                      <?php echo $categoriesForThirdPost[0]->name; ?>
+                    </span>
+                  </a>
+                  <h4 class="news__title">
+                    <?php echo get_the_title($thirdPost->ID); ?>
+                  </h4>
+                  <a href="<?php echo get_the_permalink($thirdPost->ID); ?>"
+                    class="news__link">
+                    Ver más
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+                        <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                      </mask>
+                      <g mask="url(#a)">
+                        <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            <?php endif; ?>
+          </div>
+          <div class="news__cell-4">
+            <?php
             if (count($posts) > 3):
               $fourthPost = $posts[3];
               $categoriesForFourthPost = get_the_category($fourthPost->ID);
-            
-            ?>
-            <div class="w-full h-full bg-cover bg-no-repeat mb-4" style="background-image: url(<?php echo get_the_post_thumbnail_url($fourthPost->ID, 'large'); ?>)">
-              <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
-                <a href="#" class="badge-sport block">
-                  <span class="font-family-roboto text-sm uppercase text-tarawera-950">
-                    <?php echo $categoriesForFourthPost[0]->name; ?>
-                  </span>
-                </a>
-                <h4 class="text-lg font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
-                  <?php echo get_the_title($fourthPost->ID); ?>
-                </h4>
-                <a href="<?php echo get_the_permalink($fourthPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
-                  Ver más
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                    <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
-                      <path fill="#D9D9D9" d="M0 0h24v24H0z" />
-                    </mask>
-                    <g mask="url(#a)">
-                      <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
-                    </g>
-                  </svg>
-                </a>
+
+              ?>
+              <div class="news__bgImage mb-4"
+                style="background-image: url(<?php echo get_the_post_thumbnail_url($fourthPost->ID, 'large'); ?>)">
+                <div class="news__container bg-gradient-to-t-mainColor news__sport-<?php echo sanitize_title($categoriesForFourthPost[0]->name); ?>">
+                  <a href="#" class="badge-sport ">
+                    <span class="">
+                      <?php echo $categoriesForFourthPost[0]->name; ?>
+                    </span>
+                  </a>
+                  <h4 class="news__title">
+                    <?php echo get_the_title($fourthPost->ID); ?>
+                  </h4>
+                  <a href="<?php echo get_the_permalink($fourthPost->ID); ?>"
+                    class="news__link">
+                    Ver más
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+                        <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                      </mask>
+                      <g mask="url(#a)">
+                        <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
             <?php endif; ?>
-            <?php 
+          </div>
+          <div class="news__cell-5">
+            <?php
             if (count($posts) > 4):
               $fifthPost = $posts[4];
               $categoriesForFifthPost = get_the_category($fifthPost->ID);
-            ?>
-            <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($fifthPost->ID); ?>)">
-              <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-8 bg-gradient-to-t-mainColor">
-                <a href="#" class="badge-sport block">
-                  <span class="font-family-roboto text-sm uppercase text-tarawera-950">
-                    <?php echo $categoriesForFifthPost[0]->name; ?>
-                  </span>
-                </a>
-                <h4 class="text-lg font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
-                  <?php echo get_the_title($fifthPost->ID); ?>
-                </h4>
-                <a href="<?php echo get_the_permalink($fifthPost->ID); ?>" class="font-family-oswald uppercase text-tarawera-950 text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
-                  Ver más
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                    <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
-                      <path fill="#D9D9D9" d="M0 0h24v24H0z" />
-                    </mask>
-                    <g mask="url(#a)">
-                      <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
-                    </g>
-                  </svg>
-                </a>
+              ?>
+              <div class="news__bgImage"
+                style="background-image: url(<?php echo get_the_post_thumbnail_url($fifthPost->ID); ?>)">
+                <div class="news__container bg-gradient-to-t-mainColor news__sport-<?php echo sanitize_title($categoriesForFifthPost[0]->name); ?>">
+                  <a href="#" class="badge-sport ">
+                    <span class="">
+                      <?php echo $categoriesForFifthPost[0]->name; ?>
+                    </span>
+                  </a>
+                  <h4 class="news__title">
+                    <?php echo get_the_title($fifthPost->ID); ?>
+                  </h4>
+                  <a href="<?php echo get_the_permalink($fifthPost->ID); ?>"
+                    class="news__link">
+                    Ver más
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+                        <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                      </mask>
+                      <g mask="url(#a)">
+                        <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
             <?php endif; ?>
           </div>
           <?php wp_reset_postdata(); ?>
@@ -193,7 +207,7 @@ class NewsWidget extends WP_Widget
         </div>
       <?php endif; ?>
     </div>
-  <?php
+    <?php
   }
 
   public function update($new_instance, $old_instance)
@@ -209,7 +223,7 @@ class NewsWidget extends WP_Widget
     // Retrieve widget options from $instance
     $numberPost = isset($instance['numberPost']) ? $instance['numberPost'] : 5;
     // Display widget settings form
-  ?>
+    ?>
     <p>
       <label for="<?php echo $this->get_field_id('numberPost'); ?>">
         <?php _e('Number of posts'); ?>:
@@ -218,7 +232,7 @@ class NewsWidget extends WP_Widget
         name="<?php echo $this->get_field_name('numberPost'); ?>" type="number" min="1" max="5"
         value="<?php echo esc_attr($numberPost); ?>" />
     </p>
-<?php
+    <?php
   }
 }
 
