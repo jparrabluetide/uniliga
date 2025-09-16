@@ -3,3 +3,23 @@
 .badge-sport {
   @apply block w-max px-5 py-2 rounded-full text-teal-800 font-family-inter font-bold text-xs md:text-sm uppercase mb-4;
 }
+
+.badge-sport {
+  @apply bg-voley w-max px-2 py-1 mb-5;
+}
+
+.uniliga-voley .badge-sport {
+  @apply bg-voley;
+}
+
+.uniliga-baloncesto .badge-sport {
+  @apply bg-basket;
+}
+
+.uniliga-futbol .badge-sport {
+  @apply bg-football;
+}
+
+.uniliga-flag .badge-sport {
+  @apply bg-flag;
+}

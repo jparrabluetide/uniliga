@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @theme {
   /*Sport colors*/
@@ -104,6 +105,7 @@
 @import './badges.css';
 @import './modal.css';
 @import './tabs.css';
+@import './forms.css';
 
 @import './header.css';
 @import './footer.css';
