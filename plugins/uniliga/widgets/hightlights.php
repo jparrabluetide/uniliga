@@ -91,15 +91,15 @@ class HighlightsWidget extends WP_Widget
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true">
           <main class="modal__content">
-            <div class="w-full min-w-[80vw] md:min-w-[600px] bg-gray-200 p-1 rounded-sm">
-              <div class="w-full lg:w-[760px] aspect-video modal__video">
+            <div class="modal_videoContainer">
+              <div class="modal__video">
               </div>
             </div>
           </main>
           <footer class="modal__footer">
-            <div class="mt-2 flex gap-4 justify-between">
-              <p class="font-family-roboto text-sm text-white modal__title">Lorem ipsum dolor sit amet consectetur</p>
-              <button class="modal__close text-white text-3xl cursor-pointer focus:outline-0" aria-label="Close modal" data-micromodal-close></button>
+            <div class="modal__footerContainer">
+              <p class="modal__title">Lorem ipsum dolor sit amet consectetur</p>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </div>
           </footer>
         </div>

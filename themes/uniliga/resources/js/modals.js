@@ -32,8 +32,10 @@ export default class Modals {
     this.modalData.modal = jQuery(btnModal).data('modal')
     this.modalData.videoId = jQuery(btnModal).data('videoid')
 
+    console.log(this.modalData)
+
     jQuery('#' + this.modalData.modal).find('.modal__video').html(`
-      <lite-youtube videoid="${this.modalData.videoId}" videotitle="${this.modalData.title}" autopause></lite-youtube>
+      <iframe width="760" height="428" src="https://www.youtube.com/embed/${this.modalData.videoId}" title="${this.modalData.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     `)
 
     jQuery('#' + this.modalData.modal).find('.modal__title').text(`

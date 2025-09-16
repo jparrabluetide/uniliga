@@ -32,6 +32,26 @@
   @apply p-4 max-h-[100vh] overflow-y-auto max-w-[800px] mx-auto;
 }
 
+.modal__close {
+  @apply text-white text-3xl cursor-pointer focus:outline-0;
+}
+
 .modal__close:before {
   content: '\2715';
+}
+
+.modal_videoContainer {
+  @apply w-full min-w-[80vw] md:min-w-[600px] bg-gray-200 p-1 rounded-sm;
+}
+
+.modal__video {
+  @apply w-full lg:w-[760px] aspect-video;
+}
+
+.modal__footerContainer {
+  @apply mt-2 flex gap-4 justify-between;
+}
+
+.modal__title {
+  @apply font-family-inter text-sm text-white;
 }

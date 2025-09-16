@@ -1,5 +1,5 @@
 /*Badges*/
 
 .badge-sport {
-  @apply block bg-amber-800 w-max px-5 py-2 rounded-full text-teal-800 font-family-inter font-bold text-sm uppercase mb-4;
+  @apply block bg-amber-800 w-max px-5 py-2 rounded-full text-teal-800 font-family-inter font-bold text-xs md:text-sm uppercase mb-4;
 }
