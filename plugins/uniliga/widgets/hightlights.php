@@ -34,7 +34,7 @@ class HighlightsWidget extends WP_Widget
     );
 
 ?>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="highlights-widget">
       <?php if ($data->have_posts()): ?>
         <?php while ($data->have_posts()):
           $data->the_post();
@@ -47,29 +47,29 @@ class HighlightsWidget extends WP_Widget
           $categoriesPost = get_the_category($dataId);
           $videoId = get_post_meta($dataId, 'bluetide_fields_highlight_youtube_id', true);
         ?>
-          <div class="col-span-3 lg:col-span-1">
-            <div class="p-7 bg-gray-300 w-full h-[350px] md:h-[500px] bg-cover bg-no-repeat" style="background-image: url('<?php echo get_the_post_thumbnail_url($dataId, 'highlight-card'); ?>')">
-              <div class="flex flex-col justify-between h-full">
-                <div class="bg-tarawera-950 w-14 h-14 flex items-center justify-center">
+          <div class="highlight-card">
+            <div class="highlight-bg-image" style="background-image: url('<?php echo get_the_post_thumbnail_url($dataId, 'highlight-card'); ?>')">
+              <div class="highlight-content">
+                <div class="highlight-icon">
                   <img src="<?php echo $imageCardSrc[0]; ?>" alt="icon" class="w-10 h-10" />
                 </div>
-                <div class="">
-                  <p class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+                <div class="highlight-contentText bg-gradient-to-t-mainColor">
+                  <p class="badge-sport">
+                    <span class="">
                       <?php echo $categoriesPost[0]->name; ?>
                     </span>
                   </p>
-                  <h4 class="text-lg md:text-2xl lg:text-3xl font-family-oswald text-tarawera-950 uppercase max-w-[320px] mb-5">
+                  <h4 class="highlight-title">
                     <?php the_title(); ?>
                   </h4>
-                  <button data-title="<?php the_title(); ?>" data-modal="modal-highlights" data-videoid="<?php echo $videoId; ?>" class="btn-modal cursor-pointer font-family-oswald uppercase text-tarawera-950 text-sm md:text-base flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <button data-title="<?php the_title(); ?>" data-modal="modal-highlights" data-videoid="<?php echo $videoId; ?>" class="btn-modal highlight-button">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
                         <path fill="#D9D9D9" d="M0 0h24v24H0z" />
                       </mask>
                       <g mask="url(#a)">
-                        <path fill="#003B4D" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                        <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
                       </g>
                     </svg>
                   </button>

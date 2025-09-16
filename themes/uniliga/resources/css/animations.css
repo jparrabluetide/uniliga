@@ -1,0 +1,50 @@
+/*Animations*/
+
+  --animate-fade-in: fade-in 0.4s ease-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  --animate-fade-out: fade-out 0.4s ease-out;
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  --animate-scale-in: scale-in 0.4s ease-out;
+
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.3);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  --animate-scale-out: scale-out 0.4s ease-out;
+
+  @keyframes scale-out {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/*Utilidades*/
+
+.hidden-important {
+  @apply !hidden;
+}
+
+.textWithUrl--underline a {
+  @apply !underline;
+}
+
+.bg-mainColor {
+  @apply bg-amber-800;
+}
+
+.bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-teal-800 to-transparent;
+}

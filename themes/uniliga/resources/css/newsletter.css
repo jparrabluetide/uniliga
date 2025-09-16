@@ -1,0 +1,18 @@
+/*Newsletter*/
+
+.form-newsletter .gform_title {
+  @apply hidden;
+}
+
+.form-newsletter .gform_fields {
+  row-gap: 14px !important;
+}
+
+.form-newsletter input[type='text'],
+.form-newsletter input[type='email'] {
+  @apply !bg-white/50 !py-3 !rounded-3xl !border-gray-400 !text-teal-800 text-center !outline-none font-family-inter text-base;
+}
+
+.form-newsletter input[type='submit'] {
+  @apply !w-full !bg-cyan-500 !py-3 !rounded-3xl !border-none !text-center !font-family-inter !font-bold text-base !cursor-pointer !text-teal-800;
+}

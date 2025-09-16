@@ -1,0 +1,25 @@
+/*Patrocinadores*/
+
+.cont-carousel-sponsors {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 10%,
+    rgb(0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.carousel-sponsors img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: filter 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.carousel-sponsors .swiper-wrapper {
+  transition-timing-function: linear !important;
+  -webkit-transition-timing-function: linear !important;
+  pointer-events: none !important;
+}

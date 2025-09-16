@@ -1,0 +1,25 @@
+/*Header*/
+
+#main-menu ul {
+  @apply flex gap-4 text-white font-family-inter uppercase font-bold text-sm;
+}
+
+#main-menu ul .current-menu-item {
+  @apply text-cyan-400;
+}
+
+#btn-mobile-menu .elementor-icon-wrapper {
+  @apply w-[30px] h-[30px];
+}
+
+#mobile-main-menu ul {
+  @apply text-white font-family-inter uppercase font-bold text-base text-right pb-4;
+}
+
+#mobile-main-menu ul li {
+  @apply py-1;
+}
+
+#mobile-main-menu ul .current-menu-item {
+  @apply text-cyan-400;
+}

@@ -14,59 +14,94 @@
   --color-cyan-950: #00161a;
   --color-cyan-alpha-40: rgba(0, 190, 214, 0.4);
 
+  --color-teal-50: #e0f6fa;
+  --color-teal-100: #b3e6ee;
+  --color-teal-200: #80d3e0;
+  --color-teal-300: #4dbfd1;
+  --color-teal-400: #26a7bb;
+  --color-teal-500: #008fa5;
+  --color-teal-600: #007388;
+  --color-teal-700: #00596a;
+  --color-teal-800: #003b4d; /* base */
+  --color-teal-900: #00232d;
+  --color-teal-950: #00141a;
+
+  --color-amber-50: #fff8e1;
+  --color-amber-100: #ffecb3;
+  --color-amber-200: #ffe082;
+  --color-amber-300: #ffd54f;
+  --color-amber-400: #ffca28;
+  --color-amber-500: #ffc107;
+  --color-amber-600: #ffb300;
+  --color-amber-700: #ffa000;
+  --color-amber-800: #fab52f; /* base */
+  --color-amber-900: #ff8f00;
+  --color-amber-950: #7c5a00;
+
   --font-family-inter: 'Inter', sans-serif;
+
+
+  /*Animations*/
+
+  --animate-fade-in: fade-in 0.4s ease-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  --animate-fade-out: fade-out 0.4s ease-out;
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  --animate-scale-in: scale-in 0.4s ease-out;
+
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.3);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  --animate-scale-out: scale-out 0.4s ease-out;
+
+  @keyframes scale-out {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+    }
+  }
+
 }
 
-/*Utilidades*/
+@import './utilities.css';
 
-.hidden-important {
-  @apply !hidden;
-}
+@import './header.css';
+@import './footer.css';
 
-.textWithUrl--underline a {
-  @apply !underline;
-}
+@import './modal.css';
 
-/*Header*/
+@import './highlights.css';
+@import './newsletter.css';
+@import './sponsors.css';
+@import './badges.css';
 
-#main-menu ul {
-  @apply flex gap-4 text-white font-family-inter uppercase font-bold text-sm;
-}
-
-#main-menu ul .current-menu-item {
-  @apply text-cyan-400;
-}
-
-#btn-mobile-menu .elementor-icon-wrapper {
-  @apply w-[30px] h-[30px];
-}
-
-#mobile-main-menu ul {
-  @apply text-white font-family-inter uppercase font-bold text-base text-right pb-4;
-}
-
-#mobile-main-menu ul li {
-  @apply py-1;
-}
-
-#mobile-main-menu ul .current-menu-item {
-  @apply text-cyan-400;
-}
-
-/*Footer*/
-
-.menu-footer-1 ul {
-  @apply text-white text-sm;
-}
-
-.menu-footer-1 ul li {
-  @apply pb-2;
-}
-
-.menu-footer-1 ul li a:hover {
-  @apply text-cyan-400;
-}
-
-.menu-footer-1 .current-menu-item {
-  @apply text-cyan-400;
-}

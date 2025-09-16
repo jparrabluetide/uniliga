@@ -1,0 +1,37 @@
+/*Modal*/
+
+.modal {
+  @apply hidden z-50;
+}
+
+.modal.is-open {
+  @apply block;
+}
+
+.modal[aria-hidden='false'] .modal__overlay {
+  @apply animate-fade-in;
+}
+
+.modal[aria-hidden='false'] .modal__container {
+  @apply animate-scale-in;
+}
+
+.modal[aria-hidden='true'] .modal__overlay {
+  @apply animate-fade-out;
+}
+
+.modal[aria-hidden='true'] .modal__container {
+  @apply animate-scale-out;
+}
+
+.modal__overlay {
+  @apply fixed inset-0 bg-black/80 flex justify-center items-center z-50;
+}
+
+.modal__container {
+  @apply p-4 max-h-[100vh] overflow-y-auto max-w-[800px] mx-auto;
+}
+
+.modal__close:before {
+  content: '\2715';
+}

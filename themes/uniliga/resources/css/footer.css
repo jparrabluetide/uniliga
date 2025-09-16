@@ -1,0 +1,17 @@
+/*Footer*/
+
+.menu-footer-1 ul {
+  @apply text-white text-sm;
+}
+
+.menu-footer-1 ul li {
+  @apply pb-2;
+}
+
+.menu-footer-1 ul li a:hover {
+  @apply text-cyan-400;
+}
+
+.menu-footer-1 .current-menu-item {
+  @apply text-cyan-400;
+}

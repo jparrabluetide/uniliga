@@ -1,0 +1,33 @@
+/*Highlights*/
+
+.highlights-widget {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.highlight-card {
+  @apply col-span-3 lg:col-span-1;
+}
+
+.highlight-bg-image {
+  @apply bg-gray-300 w-full h-[350px] md:h-[480px] bg-cover bg-no-repeat rounded-2xl;
+}
+
+.highlight-content {
+  @apply flex flex-col justify-between h-full;
+}
+
+.highlight-title {
+  @apply text-2xl text-white font-family-inter uppercase font-bold mb-4;
+}
+
+.highlight-button {
+  @apply text-lg font-family-inter uppercase font-semibold text-amber-800 cursor-pointer flex items-center gap-1;
+}
+
+.highlight-contentText {
+  @apply p-7 rounded-b-2xl;
+}
+
+.highlight-icon {
+  @apply w-14 h-14 flex items-center justify-center ml-4 mt-5;
+}
