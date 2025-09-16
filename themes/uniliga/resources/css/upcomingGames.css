@@ -1,0 +1,100 @@
+.upcomingGames__grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center justify-center;
+}
+
+.upcomingGames__card {
+  @apply border-gray-400 border p-5 rounded-2xl h-full;
+}
+
+.upcomingGames__containerDate {
+  @apply flex items-center justify-between gap-4 mb-4 text-sm text-teal-800;
+}
+
+.upcomingGames__dateIcons {
+  @apply flex items-center gap-2;
+}
+
+.e-n-tabs-content div[ aria-labelledby="tab-voley"] hr {
+  @apply border-voley;
+}
+
+.e-n-tabs-content div[ aria-labelledby="tab-baloncesto"] hr {
+  @apply border-basket;
+}
+
+.e-n-tabs-content div[ aria-labelledby="tab-flag"] hr {
+  @apply border-flag;
+}
+
+.e-n-tabs-content div[ aria-labelledby="tab-futbol"] hr {
+  @apply border-football;
+}
+
+
+.upcomingGames__nextMatch {
+  @apply text-white text-center font-bold text-xl font-family-inter uppercase pb-4;
+}
+
+.upcomingGames__containerTeams {
+  @apply flex items-center justify-between gap-4 px-4 py-4;
+}
+
+.upcomingGames__teamLogo {
+  @apply w-20 h-20 rounded-full mx-auto bg-gray-300 flex items-center justify-center [&>img]:aspect-square [&>img]:w-14 [&>img]:object-contain;
+}
+
+.upcomingGames__vs {
+  @apply !mb-0 text-base md:text-xl font-bold font-family-inter text-teal-800;
+}
+
+.upcomingGames__containerLeague {
+  @apply text-center text-lg uppercase font-bold mb-3 font-family-inter mt-2 pt-5;
+}
+
+.e-n-tabs-content div[ aria-labelledby="tab-voley"] .upcomingGames__containerLeague {
+  @apply text-voley;
+}
+.e-n-tabs-content div[ aria-labelledby="tab-baloncesto"] .upcomingGames__containerLeague {
+  @apply text-basket;
+}
+.e-n-tabs-content div[ aria-labelledby="tab-flag"] .upcomingGames__containerLeague {
+  @apply text-flag;
+}
+.e-n-tabs-content div[ aria-labelledby="tab-futbol"] .upcomingGames__containerLeague {
+  @apply text-football;
+}
+
+.upcomingGames__teamName {
+  @apply font-family-inter text-sm font-bold uppercase text-teal-800 text-center mt-2 flex justify-center items-center h-11;
+}
+
+.upcomingGames__grid .upcomingGames__card:nth-child(1) {
+  @apply bg-teal-800 text-white;
+}
+.upcomingGames__grid .upcomingGames__card:nth-child(1) .upcomingGames__vs {
+  @apply text-white;
+}
+
+.upcomingGames__grid .upcomingGames__card:nth-child(1) .upcomingGames__teamName {
+  @apply text-white;
+}
+
+.upcomingGames__grid .upcomingGames__containerDate--2 {
+  @apply text-white pt-4 hidden;
+}
+
+.upcomingGames__grid .upcomingGames__card:nth-child(1) .upcomingGames__containerDate--1 {
+  @apply text-white hidden;
+}
+
+.upcomingGames__grid .upcomingGames__card:nth-child(1) .upcomingGames__containerDate--2 {
+  @apply text-white flex;
+}
+
+.match-1 {
+  @apply hidden;
+}
+
+.upcomingGames__grid .upcomingGames__card:nth-child(1) .match-1 {
+  @apply block;
+}
