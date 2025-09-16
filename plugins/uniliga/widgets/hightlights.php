@@ -54,7 +54,7 @@ class HighlightsWidget extends WP_Widget
                   <img src="<?php echo $imageCardSrc[0]; ?>" alt="icon" class="w-10 h-10" />
                 </div>
                 <div class="highlight-contentText bg-gradient-to-t-mainColor">
-                  <p class="badge-sport">
+                  <p class="badge-sport bg__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
                     <span class="">
                       <?php echo $categoriesPost[0]->name; ?>
                     </span>
@@ -62,7 +62,7 @@ class HighlightsWidget extends WP_Widget
                   <h4 class="highlight-title">
                     <?php the_title(); ?>
                   </h4>
-                  <button data-title="<?php the_title(); ?>" data-modal="modal-highlights" data-videoid="<?php echo $videoId; ?>" class="btn-modal highlight-button">
+                  <button data-title="<?php the_title(); ?>" data-modal="modal-highlights" data-videoid="<?php echo $videoId; ?>" class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">

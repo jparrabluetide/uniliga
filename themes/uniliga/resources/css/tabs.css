@@ -1,0 +1,17 @@
+.sport-tabs #tab-voley[aria-selected="true"] {
+  @apply !bg-voley;
+}
+
+.sport-tabs #tab-baloncesto[aria-selected="true"] {
+  @apply !bg-basket;
+}
+
+.sport-tabs #tab-flag[aria-selected="true"] {
+  @apply !bg-flag;
+}
+
+.sport-tabs #tab-futbol[aria-selected="true"] {
+  @apply !bg-football;
+}
+
+

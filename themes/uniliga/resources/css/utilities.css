@@ -15,3 +15,29 @@
 .bg-gradient-to-t-mainColor {
   @apply bg-gradient-to-t from-teal-800 to-transparent;
 }
+
+.bg__sport-voley {
+  @apply bg-voley;
+}
+.bg__sport-baloncesto {
+  @apply bg-basket;
+}
+.bg__sport-flag {
+  @apply bg-flag;
+}
+.bg__sport-futbol {
+  @apply bg-football;
+}
+
+.text__sport-voley {
+  @apply text-voley;
+}
+.text__sport-baloncesto {
+  @apply text-basket;
+}
+.text__sport-flag {
+  @apply text-flag;
+}
+.text__sport-futbol {
+  @apply text-football;
+}
