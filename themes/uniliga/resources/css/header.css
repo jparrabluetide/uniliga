@@ -1,11 +1,31 @@
 /*Header*/
 
-#main-menu ul {
+#main-menu .menu {
   @apply flex gap-4 text-white font-family-inter uppercase font-bold text-sm;
 }
 
-#main-menu ul .current-menu-item {
+#main-menu .menu .current-menu-item {
   @apply text-cyan-400;
+}
+
+#main-menu .menu-item {
+  @apply border-b border-transparent relative;
+}
+
+#main-menu .sub-menu {
+  @apply absolute -top-0 -left-6 w-max pt-10 z-10 hidden;
+}
+
+#main-menu .sub-menu::after {
+  @apply absolute top-0 left-12 w-5 h-5 bg-teal-800 rotate-45;
+}
+
+#main-menu .sub-menu li {
+  @apply px-4 py-2 bg-teal-800;
+}
+
+#main-menu li.menu-item-has-children:hover .sub-menu {
+  @apply block;
 }
 
 #btn-mobile-menu .elementor-icon-wrapper {
