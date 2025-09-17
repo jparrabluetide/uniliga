@@ -1,0 +1,32 @@
+.carousel-1 {
+  @apply relative;
+}
+
+.carousel-1 .owl-dots {
+  @apply absolute ml-4 md:ml-10 -mt-[30px] md:-mt-[100px];
+}
+
+.owl-dots .owl-dot {
+  @apply inline-block;
+}
+
+.owl-carousel button.owl-dot {
+  @apply bg-transparent text-inherit border-none p-0;
+}
+
+.owl-dots .owl-dot span {
+  @apply block w-3 h-3 md:w-[14px] md:h-[14px]  rounded-full mx-1 transition-opacity duration-200 bg-gray-400;
+}
+
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+  @apply bg-gray-200;
+}
+
+.carousel-1 .owl-nav {
+  @apply hidden md:block absolute right-0 mr-10 -mt-[100px];
+}
+
+.carousel-1 .owl-nav button {
+  @apply !bg-black/50 !text-5xl !p-3 w-[50px] h-[50px] !text-white mx-2;
+}

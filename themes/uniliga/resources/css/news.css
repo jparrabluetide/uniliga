@@ -15,7 +15,7 @@
 }
 
 .news__bgImage {
-  @apply w-full h-full bg-cover bg-no-repeat rounded-2xl;
+  @apply w-full h-full bg-cover bg-no-repeat rounded-2xl min-h-[350px];
 }
 
 .news__container {

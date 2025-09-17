@@ -1,5 +1,6 @@
 import MainMenu from './mainMenu'
 import Modals from './modals';
+import Carousels from './carousels'
 
 ;(function ($) {
   'use strict'
@@ -10,6 +11,9 @@ import Modals from './modals';
     }
     if (jQuery('.modal').length > 0) {
       new Modals()
+    }
+    if( jQuery('.carousel-1').length > 0) {
+      new Carousels().carousel1()
     }
   })
 })(jQuery)

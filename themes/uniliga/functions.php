@@ -199,8 +199,25 @@ function bluetide_styles_scripts()
 {
   require_once('uniligaConfig.php');
   $uniliga = new Uniliga();
-  wp_enqueue_style('bluetide-style', get_template_directory_uri() . '/public/css/app.css', array(), VERSION);
-  wp_enqueue_script('bluetide-script', get_template_directory_uri() . '/public/js/app.js', array('jquery'), VERSION, true);
+
+  wp_enqueue_style(
+    'owl-carousel-css',
+    'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css',
+    [],
+    '2.3.4'
+  );
+
+  wp_enqueue_script(
+    'owl-carousel-js',
+    'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js',
+    ['jquery'], // Depende de jQuery
+    '2.3.4',
+    true
+  );
+
+
+  wp_enqueue_style('bluetide-style', get_template_directory_uri() . '/public/css/app.css', array('owl-carousel-css'), VERSION);
+  wp_enqueue_script('bluetide-script', get_template_directory_uri() . '/public/js/app.js', array('jquery', 'owl-carousel-js'), VERSION, true);
 
   // Creamos un array con las variables que queremos pasar a JS.
   // Aquí generamos el nonce para la acción 'bluetide_ajax_nonce'.
