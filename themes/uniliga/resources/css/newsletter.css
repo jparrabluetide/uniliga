@@ -16,3 +16,7 @@
 .form-newsletter input[type='submit'] {
   @apply !w-full !bg-cyan-500 !py-3 !rounded-3xl !border-none !text-center !font-family-inter !font-bold text-base !cursor-pointer !text-teal-800;
 }
+
+.form-newsletter .gform-field-label {
+  @apply !hidden;
+}

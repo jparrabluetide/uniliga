@@ -33,7 +33,7 @@ class HighlightsWidget extends WP_Widget
       )
     );
 
-?>
+    ?>
     <div class="highlights-widget">
       <?php if ($data->have_posts()): ?>
         <?php while ($data->have_posts()):
@@ -46,12 +46,15 @@ class HighlightsWidget extends WP_Widget
 
           $categoriesPost = get_the_category($dataId);
           $videoId = get_post_meta($dataId, 'bluetide_fields_highlight_youtube_id', true);
-        ?>
+          ?>
           <div class="highlight-card">
-            <div class="highlight-bg-image" style="background-image: url('<?php echo get_the_post_thumbnail_url($dataId, 'highlight-card'); ?>')">
+            <div class="highlight-bg-image"
+              style="background-image: url('<?php echo get_the_post_thumbnail_url($dataId, 'highlight-card'); ?>')">
               <div class="highlight-content">
                 <div class="highlight-icon">
-                  <img src="<?php echo $imageCardSrc[0]; ?>" alt="icon" class="w-10 h-10" />
+                  <?php if (!empty($imageCardSrc)): ?>
+                    <img src="<?php echo $imageCardSrc[0]; ?>" alt="icon" class="w-10 h-10" />
+                  <?php endif; ?>
                 </div>
                 <div class="highlight-contentText bg-gradient-to-t-mainColor">
                   <p class="badge-sport bg__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
@@ -62,7 +65,9 @@ class HighlightsWidget extends WP_Widget
                   <h4 class="highlight-title">
                     <?php the_title(); ?>
                   </h4>
-                  <button data-title="<?php the_title(); ?>" data-modal="modal-highlights" data-videoid="<?php echo $videoId; ?>" class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
+                  <button data-title="<?php the_title(); ?>" data-modal="modal-highlights"
+                    data-videoid="<?php echo $videoId; ?>"
+                    class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -131,12 +136,13 @@ class HighlightsWidget extends WP_Widget
     // Retrieve widget options from $instance
     $numberPost = isset($instance['numberPost']) ? $instance['numberPost'] : 5;
 
-  ?>
+    ?>
     <p>
       <label for="<?php echo $this->get_field_id('siteId'); ?>"><?php _e('Site:', 'bluetide'); ?></label>
-      <select class="widefat" id="<?php echo $this->get_field_id('siteId'); ?>" name="<?php echo $this->get_field_name('siteId'); ?>">
+      <select class="widefat" id="<?php echo $this->get_field_id('siteId'); ?>"
+        name="<?php echo $this->get_field_name('siteId'); ?>">
         <?php
-        foreach ($sites as $site) :
+        foreach ($sites as $site):
           $blog_id = $site['blog_id'];
           //$domain = $site['domain'];
           //$path = $site['path'];
@@ -157,7 +163,7 @@ class HighlightsWidget extends WP_Widget
         name="<?php echo $this->get_field_name('numberPost'); ?>" type="number" min="1" max="5"
         value="<?php echo esc_attr($numberPost); ?>" />
     </p>
-<?php
+    <?php
     restore_current_blog();
   }
 }

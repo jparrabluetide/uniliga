@@ -1,0 +1,69 @@
+<?php get_header(); ?>
+<?php
+$data = new WP_Query(
+  array(
+    'post_type' => 'new',
+    'posts_status' => 'publish',
+    'order_by' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => 12,
+    'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
+  )
+);
+?>
+<div class="container px-4 mx-auto pt-10 md:pt-20 pb-10 max-w-7xl mb-1">
+  <div class="news">
+    <h1 class="text-2xl md:text-4xl font-family-inter text-teal-800 uppercase font-medium mb-8"><?php echo __('Noticias', 'bluetide') ?></h1>
+    <?php if ($data->have_posts()): ?>
+      <div class="grid grid-cols-3 gap-4">
+        <?php while ($data->have_posts()):
+          $data->the_post();
+          $dataId = get_the_ID();
+          $categoriesPost = get_the_category($dataId);
+        ?>
+          <div class="col-span-3 lg:col-span-1 min-h-[350px]">
+            <div class="w-full h-full bg-cover bg-no-repeat rounded-2xl" style="background-image: url(<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>)">
+              <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor rounded-b-2xl news__sport-<?php echo sanitize_title( $categoriesPost[0]->name ) ?>">
+                <p class="badge-sport block">
+                  <span class="font-family-inter text-sm uppercase text-teal-800">
+                    <?php echo $categoriesPost[0]->name; ?>
+                  </span>
+                </p>
+                <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-5">
+                  <?php echo get_the_title($dataId); ?>
+                </h4>
+                <a href="<?php echo get_the_permalink($dataId); ?>" class="font-family-inter uppercase text-white text-sm md:text-base flex items-center gap-2 border-b border-white w-max px-3 pb-2">
+                  Ver más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                    <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+                      <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                    </mask>
+                    <g mask="url(#a)">
+                      <path fill="currentColor" d="M6.4 18 5 16.6 14.6 7H6V5h12v12h-2V8.4L6.4 18Z" />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        <?php endwhile; ?>
+      </div>
+      <div class="pagination">
+        <?php
+        echo paginate_links(array(
+          'total'   => $data->max_num_pages,
+          'current' => max(1, get_query_var('paged')),
+          'prev_text' => __('&laquo;', 'bluetide'),
+          'next_text' => __('&raquo;', 'bluetide'),
+        ));
+        ?>
+      </div>
+      <?php wp_reset_postdata(); ?>
+    <?php else: ?>
+      <div class="w-full text-center">
+        <p class="text-center text-xl text-black"><?php _e('No posts found', 'bluetide'); ?></p>
+      </div>
+    <?php endif; ?>
+  </div>
+</div>
+<?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('VERSION')) {
-  define('VERSION', '2.0.0');
+  define('VERSION', '2.0.1');
 }
 
 

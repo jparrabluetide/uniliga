@@ -1,0 +1,15 @@
+/*
+Pagination
+*/
+
+.pagination {
+  @apply py-6 w-max mx-auto;
+}
+
+.pagination .page-numbers {
+  @apply bg-teal-800 text-white py-2 px-4 md:mx-1 rounded-sm;
+}
+
+.pagination .current {
+  @apply bg-cyan-800;
+}
