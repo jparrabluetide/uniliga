@@ -73,3 +73,21 @@
 .news__sport-futbol .badge-sport {
   @apply bg-football;
 }
+
+/*News 2*/
+
+.news-2 {
+  @apply grid grid-cols-2 grid-rows-3 lg:grid-rows-2 gap-4 w-full lg:max-h-[600px];
+}
+
+.news-2__content-1 {
+  @apply col-span-2 lg:col-span-1 lg:row-span-2 bg-gray-200 rounded-2xl w-full h-full relative;
+}
+
+.news-2__content-2 {
+  @apply col-span-2 lg:col-span-1;
+}
+
+.news-2 .highlight-title {
+  @apply text-lg;
+}

@@ -1,0 +1,29 @@
+/*Tabla*/
+
+.tablePosition table thead tr {
+  @apply !border-none;
+}
+
+.tablePosition table thead tr th {
+  @apply !bg-gradient-to-b !from-cyan-500 !to-teal-800 !text-white !font-family-inter !uppercase !text-lg !py-2 !border-none;
+}
+
+.tablePosition table tbody tr td {
+  @apply !bg-white !text-base !font-family-inter !text-teal-800 !border-t-0 !border-l-0 !border-r-0 !border-b !border-teal-800 !py-2;
+}
+
+.tablePosition .sp-league-table-link {
+  @apply !py-2 !px-2;
+}
+
+.tablePosition .sp-league-table-link a {
+  @apply !text-teal-800 !font-family-inter !text-lg !uppercase !text-center !font-normal !block !bg-cyan-500 !py-3;
+}
+
+.tablePosition .sp-template-league-table {
+  @apply !bg-white;
+}
+
+.tablePosition .widgettitle {
+  @apply font-family-inter uppercase text-teal-800 font-medium text-center mb-5 text-xl md:text-3xl;
+}

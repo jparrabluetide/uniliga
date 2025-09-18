@@ -4,6 +4,10 @@
   @apply !hidden;
 }
 
+.h-full-important {
+  @apply !h-full;
+}
+
 .textWithUrl--underline a {
   @apply !underline;
 }

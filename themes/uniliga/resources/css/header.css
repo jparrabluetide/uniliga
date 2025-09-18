@@ -17,7 +17,8 @@
 }
 
 #main-menu .sub-menu::after {
-  @apply absolute top-0 left-12 w-5 h-5 bg-teal-800 rotate-45;
+  content: '';
+  @apply absolute top-8 left-12 w-5 h-5 bg-teal-800 rotate-45;
 }
 
 #main-menu .sub-menu li {
@@ -42,4 +43,18 @@
 
 #mobile-main-menu ul .current-menu-item {
   @apply text-cyan-400;
+}
+
+/*Menu sport*/
+
+.menu-sport ul li {
+  @apply text-teal-800;
+}
+
+.menu-sport ul .current-menu-item {
+  @apply !text-white;
+}
+
+.menu-sport .sub-menu li {
+  @apply text-white;
 }

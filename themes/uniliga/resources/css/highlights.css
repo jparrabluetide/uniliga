@@ -13,7 +13,7 @@
 }
 
 .highlight-content {
-  @apply flex flex-col justify-between h-full;
+  @apply flex flex-col justify-end h-full;
 }
 
 .highlight-title {
