@@ -1,0 +1,74 @@
+/*Calendario*/
+
+.calendarGameEvents {
+  @apply !p-0;
+}
+
+.calendarGameEvents table {
+  @apply !w-full !border-0;
+}
+
+.calendarGameEvents .sp-calendar-wrapper {
+  @apply !border !border-teal-800 !w-full;
+}
+
+.calendarGameEvents .sp-table-caption {
+  @apply !bg-cyan-500 font-family-inter !text-white !capitalize !text-2xl md:!text-4xl !border-0;
+}
+
+.calendarGameEvents thead tr th {
+  @apply !bg-teal-800 !text-white !font-normal !text-xl md:!text-2xl !py-3 !border !border-cyan-500;
+}
+
+.calendarGameEvents tbody tr td {
+  @apply !bg-gray-200 !text-base !border !border-gray-400;
+}
+
+.calendarGameEvents tbody tr td.pad {
+  @apply !bg-white;
+}
+
+.calendarGameEvents tbody tr td#today {
+  @apply !bg-cyan-500 !text-white;
+}
+
+.calendarGameEvents tbody tr td a {
+  @apply absolute w-full h-full bg-football inset-0 flex justify-center items-center !text-white;
+}
+
+.calendarGameEvents tbody tr td a::before,
+.calendarGameEvents tfoot {
+  @apply !hidden;
+}
+
+.uniliga-voley .calendarGameEvents .sp-table-caption {
+  @apply !bg-voley;
+}
+
+.uniliga-voley .calendarGameEvents thead tr th {
+  @apply !border-voley;
+}
+
+.uniliga-baloncesto .calendarGameEvents .sp-table-caption {
+  @apply !bg-basket;
+}
+
+.uniliga-baloncesto .calendarGameEvents thead tr th {
+  @apply !border-basket;
+}
+
+.uniliga-futbol .calendarGameEvents .sp-table-caption {
+  @apply !bg-football;
+}
+
+.uniliga-futbol .calendarGameEvents thead tr th {
+  @apply !border-football;
+}
+
+.uniliga-flag .calendarGameEvents .sp-table-caption {
+  @apply !bg-flag;
+}
+
+.uniliga-flag .calendarGameEvents thead tr th {
+  @apply !border-flag;
+}

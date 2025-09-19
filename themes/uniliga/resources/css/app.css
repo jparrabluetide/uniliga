@@ -112,10 +112,16 @@
 @import './footer.css';
 @import './pagination.css';
 @import './tables.css';
+@import './calendar.css';
 
 @import './highlights.css';
 @import './newsletter.css';
 @import './sponsors.css';
 @import './news.css';
 @import './upcomingGames.css';
+@import './players.css';
+@import './nextGame.css';
+
+@source '../../*.php';
+@source '../../../../plugins/uniliga/widgets/*.php';
 

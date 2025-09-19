@@ -1,0 +1,47 @@
+.nextGame__grid {
+  @apply grid grid-cols-2 grid-rows-2 gap-4 font-family-inter;
+}
+
+.nextGame__content-1 {
+  @apply bg-teal-800 col-span-2 lg:col-span-1 row-span-2
+}
+
+.nextGame__content-flex {
+  @apply flex flex-col justify-between h-full;
+}
+
+.nextGame__match-title {
+  @apply !text-white text-center !mb-0 pb-2 pt-4 uppercase !text-base md:!text-xl font-family-inter;
+}
+
+.nextGame__separator-content {
+  @apply px-4 w-full;
+}
+
+.gameCard__logo {
+  @apply w-20 h-20 mx-auto bg-gray-300 rounded-full mb-2 flex items-center justify-center [&>img]:aspect-square [&>img]:w-16 [&>img]:object-contain;
+}
+
+.nextGame__teams {
+  @apply my-4 flex gap-2 justify-between items-center px-4 pb-1;
+}
+
+.gameCard {
+  @apply w-24;
+}
+
+.gameCard__team {
+  @apply text-white !mb-0 text-xs md:text-base text-center uppercase;
+}
+
+.gameCard__vs {
+  @apply text-white !mb-0 text-lg;
+}
+
+.gameCard__mainDate {
+  @apply flex items-center justify-between gap-4 px-4 pb-5;
+}
+
+.gameCard__date {
+  @apply flex items-center gap-2;
+}

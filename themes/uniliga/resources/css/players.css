@@ -1,0 +1,31 @@
+.players-container {
+  @apply w-full;
+}
+
+.players-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4;
+}
+
+.player-container {
+  @apply col-span-1;
+}
+
+.playerCard {
+  @apply w-full bg-gray-300 min-h-[340px] md:min-h-[240px];
+}
+
+.playerCar__img {
+  @apply w-full !h-full object-cover object-top;
+}
+
+.playerCard__info {
+  @apply py-4 px-4;
+}
+
+.playerCard__name {
+  @apply text-base font-family-inter text-white;
+}
+
+.playerCard__team {
+  @apply text-sm font-family-inter text-white;
+}

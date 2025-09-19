@@ -75,23 +75,30 @@ class AnotationPayersWidget extends WP_Widget
     $top_players = array_slice($players_with_stats, 0, $instance['numberPost'] ?? 5);
 
     ?>
-    <div class="w-full">
+    <div class="players-container">
       <?php if (!empty($top_players)): ?>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        <div class="players-grid">
           <?php foreach ($top_players as $player):
             $player_post = get_post($player['post_id']);
             $dataId = $player_post->ID;
             $team_id = get_post_meta($dataId, 'sp_team', true);
             $teamName = get_the_title($team_id);
             ?>
-            <div class="col-span-1">
-              <div class="w-full bg-gray-300 h-[340px] md:h-[280px]">
-                <img src="<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>" alt="<?php echo get_the_title($dataId); ?>"
-                  class="w-full !h-full object-cover object-top" />
+            <div class="player-container">
+              <div class="playerCard">
+                <?php 
+                  if(!get_the_post_thumbnail_url($dataId, 'large')) {
+                    $playerImg = get_template_directory_uri() . '/images/avatars/men.webp';
+                  } else {
+                    $playerImg = get_the_post_thumbnail_url($dataId, 'large');
+                  }
+                ?>
+                <img src="<?php echo $playerImg; ?>" alt="<?php echo get_the_title($dataId); ?>"
+                  class="playerCard__img" />
               </div>
-              <div class="bg-gradient-to-b-mainColor py-4 px-4">
-                <h4 class="text-lg font-family-oswald text-white"><?php echo get_the_title($dataId); ?></h4>
-                <p class="text-sm font-family-roboto text-white">
+              <div class="bg-gradient-to-b-mainColor playerCard__info">
+                <h4 class="playerCard__name"><?php echo get_the_title($dataId); ?></h4>
+                <p class="playerCard__team">
                   <?php echo $teamName; ?>
                 </p>
               </div>

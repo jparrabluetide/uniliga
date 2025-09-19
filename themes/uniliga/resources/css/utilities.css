@@ -45,3 +45,50 @@
 .text__sport-futbol {
   @apply text-football;
 }
+
+/*Degaraddo*/
+
+.uniliga-voley .bg-gradient-to-b-mainColor {
+  @apply bg-gradient-to-b from-voley to-teal-800;
+}
+
+.uniliga-baloncesto .bg-gradient-to-b-mainColor {
+  @apply bg-gradient-to-b from-basket to-orange-900;
+}
+
+.uniliga-futbol .bg-gradient-to-b-mainColor {
+  @apply bg-gradient-to-b from-football to-yellow-900;
+}
+
+.uniliga-flag .bg-gradient-to-b-mainColor {
+  @apply bg-gradient-to-b from-flag to-green-800;
+}
+
+/*Texto segun deporte*/
+.uniliga-voley .text-sport {
+  @apply text-voley;
+}
+.uniliga-baloncesto .text-sport {
+  @apply text-basket;
+}
+.uniliga-futbol .text-sport {
+  @apply text-football;
+}
+.uniliga-flag .text-sport {
+  @apply text-flag;
+}
+
+
+/*Fondo segun deporte*/
+.uniliga-voley .bg-sport {
+  @apply bg-voley;
+}
+.uniliga-baloncesto .bg-sport {
+  @apply bg-basket;
+}
+.uniliga-futbol .bg-sport {
+  @apply bg-football;
+}
+.uniliga-flag .bg-sport {
+  @apply bg-flag;
+}
