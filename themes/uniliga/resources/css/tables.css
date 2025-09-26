@@ -25,5 +25,5 @@
 }
 
 .tablePosition .widgettitle {
-  @apply font-family-inter uppercase text-sport font-medium text-center mb-5 text-xl md:text-2xl;
+  @apply font-family-inter uppercase font-medium text-center mb-5 text-xl md:text-2xl;
 }

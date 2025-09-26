@@ -52,7 +52,7 @@ class NewsWidget2 extends WP_Widget
                       <?php echo get_the_title($firstPost->ID); ?>
                     </h4>
                     <a href="<?php echo get_the_permalink($firstPost->ID); ?>"
-                      class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesForFirstPost[0]->name); ?>">
+                      class="btn-modal highlight-button text-white">
                       Ver más
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                         <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -87,7 +87,7 @@ class NewsWidget2 extends WP_Widget
                       <?php echo get_the_title($secondPost->ID); ?>
                     </h4>
                     <a href="<?php echo get_the_permalink($secondPost->ID); ?>"
-                      class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesForSecondPost[0]->name); ?>">
+                      class="btn-modal highlight-button text-white">
                       Ver más
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                         <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -120,7 +120,7 @@ class NewsWidget2 extends WP_Widget
                       <?php echo get_the_title($thirdPost->ID); ?>
                     </h4>
                     <a href="<?php echo get_the_permalink($thirdPost->ID); ?>"
-                      class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesForThirdPost[0]->name); ?>">
+                      class="btn-modal highlight-button text-white">
                       Ver más
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                         <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">

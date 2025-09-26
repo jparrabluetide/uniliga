@@ -64,7 +64,26 @@
   @apply bg-gradient-to-b from-flag to-green-800;
 }
 
+.uniliga-voley .bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-voley to-transparent;
+}
+
+.uniliga-baloncesto .bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-basket to-transparent;
+}
+
+.uniliga-futbol .bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-football to-transparent;
+}
+
+.uniliga-flag .bg-gradient-to-t-mainColor {
+  @apply bg-gradient-to-t from-flag to-transparent;
+}
+
 /*Texto segun deporte*/
+.text-sport {
+  @apply text-voley;
+}
 .uniliga-voley .text-sport {
   @apply text-voley;
 }
@@ -80,6 +99,9 @@
 
 
 /*Fondo segun deporte*/
+.bg-sport {
+  @apply bg-voley;
+}
 .uniliga-voley .bg-sport {
   @apply bg-voley;
 }

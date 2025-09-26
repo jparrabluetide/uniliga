@@ -31,44 +31,28 @@
 }
 
 .news__link {
-  @apply flex items-center gap-2 text-sm md:text-base font-semibold uppercase font-family-inter;
-}
-
-.news__sport-futbol .news__link {
-  @apply text-football;
+  @apply flex items-center gap-2 text-sm md:text-base font-semibold uppercase font-family-inter text-white;
 }
 
 .news__sport-futbol .badge-sport {
   @apply bg-football;
 }
 
-.news__sport-flag .news__link {
-  @apply text-flag;
-}
 
 .news__sport-flag .badge-sport {
   @apply bg-flag;
 }
 
-.news__sport-baloncesto .news__link {
-  @apply text-basket;
-}
 
 .news__sport-baloncesto .badge-sport {
   @apply bg-basket;
 }
 
-.news__sport-voley .news__link {
-  @apply text-voley;
-}
 
 .news__sport-voley .badge-sport {
   @apply bg-voley;
 }
 
-.news__sport-futbol .news__link {
-  @apply text-football;
-}
 
 .news__sport-futbol .badge-sport {
   @apply bg-football;

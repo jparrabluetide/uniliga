@@ -14,8 +14,8 @@
   @apply w-full bg-gray-300 min-h-[340px] md:min-h-[240px];
 }
 
-.playerCar__img {
-  @apply w-full !h-full object-cover object-top;
+.playerCard__img {
+  @apply w-full !h-[242px] object-cover object-top;
 }
 
 .playerCard__info {

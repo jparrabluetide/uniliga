@@ -37,15 +37,15 @@ $data = new WP_Query($args);
           <div class="col-span-3 lg:col-span-1">
             <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($dataId, 'large'); ?>)">
               <div class="w-full h-full min-h-[250px] flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
-                <p class="badge-sport block">
-                  <span class="font-family-roboto text-sm uppercase text-teal-800">
+                <p class="badge-sport block bg__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
+                  <span class="font-family-inter text-sm uppercase text-teal-800">
                     <?php echo $categoriesPost[0]->name; ?>
                   </span>
                 </p>
                 <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-3">
                   <?php echo get_the_title($dataId); ?>
                 </h4>
-                <a href="<?php echo get_the_post_thumbnail_url($dataId); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($dataId); ?>" class="font-family-inter uppercase text-sport text-sm flex items-center gap-2 border-b border-teal-800 w-max px-3 pb-1">
+                <a href="<?php echo get_the_post_thumbnail_url($dataId); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($dataId); ?>" class="font-family-inter uppercase text-white text-sm flex items-center gap-2 border-b border-teal-800 w-max px-3 pb-1">
                   Ver highlights
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                     <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">

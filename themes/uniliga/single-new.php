@@ -6,6 +6,7 @@
       <div class="col-span-12 md:col-span-8 prose prose-base lg:prose-lg">
         <h1 class="text-2xl md:text-4xl font-family-inter uppercase text-teal-800 mb-7 "><?php the_title(); ?></h1>
         <div class="w-full">
+          <?php the_post_thumbnail('large'); ?>
           <?php the_content(); ?>
         </div>
       </div>

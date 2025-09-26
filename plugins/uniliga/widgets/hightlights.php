@@ -67,7 +67,7 @@ class HighlightsWidget extends WP_Widget
                   </h4>
                   <button data-title="<?php the_title(); ?>" data-modal="modal-highlights"
                     data-videoid="<?php echo $videoId; ?>"
-                    class="btn-modal highlight-button text__sport-<?php echo sanitize_title($categoriesPost[0]->name); ?>">
+                    class="btn-modal highlight-button text-white">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">

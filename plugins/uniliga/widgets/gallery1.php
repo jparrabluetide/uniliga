@@ -58,14 +58,14 @@ class Gallery1Widget extends WP_Widget
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($firstPost->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
                   <p class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+                    <span class="font-family-inter text-sm uppercase text-teal-800">
                       <?php echo $categoriesPost0[0]->name; ?>
                     </span>
                   </p>
-                  <h4 class="text-lg md:text-xl font-family-oswald text-white uppercase max-w-[320px] mb-3">
+                  <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-3">
                     <?php echo get_the_title($firstPost->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_post_thumbnail_url($firstPost->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($firstPost->ID); ?>" class="font-family-oswald uppercase text-sport text-sm flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_post_thumbnail_url($firstPost->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($firstPost->ID); ?>" class="font-family-inter uppercase text-white text-sm flex items-center gap-2 border-b border-cyan-800 w-max px-3 pb-2">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -89,14 +89,14 @@ class Gallery1Widget extends WP_Widget
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post1->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
                   <p class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+                    <span class="font-family-inter text-sm uppercase text-teal-800">
                       <?php echo $categoriesPost1[0]->name; ?>
                     </span>
                   </p>
-                  <h4 class="text-lg md:text-xl font-family-oswald text-white uppercase max-w-[320px] mb-3">
+                  <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-3">
                     <?php echo get_the_title($post1->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_post_thumbnail_url($post1->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post1->ID); ?>" class="font-family-oswald uppercase text-sport text-sm flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_post_thumbnail_url($post1->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post1->ID); ?>" class="font-family-inter uppercase text-white text-sm flex items-center gap-2 border-b border-cyan-800 w-max px-3 pb-2">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -120,14 +120,14 @@ class Gallery1Widget extends WP_Widget
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post2->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
                   <p class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+                    <span class="font-family-inter text-sm uppercase text-teal-800">
                       <?php echo $categoriesPost2[0]->name; ?>
                     </span>
                   </p>
-                  <h4 class="text-lg md:text-xl font-family-oswald text-white uppercase max-w-[320px] mb-3">
+                  <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-3">
                     <?php echo get_the_title($post2->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_post_thumbnail_url($post2->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post2->ID); ?>" class="font-family-oswald uppercase text-sport text-sm flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_post_thumbnail_url($post2->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post2->ID); ?>" class="font-family-inter uppercase text-white text-sm flex items-center gap-2 border-b border-cyan-800 w-max px-3 pb-2">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -151,14 +151,14 @@ class Gallery1Widget extends WP_Widget
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post3->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
                   <p class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+                    <span class="font-family-inter text-sm uppercase text-teal-800">
                       <?php echo $categoriesPost3[0]->name; ?>
                     </span>
                   </p>
-                  <h4 class="text-lg md:text-xl font-family-oswald text-white uppercase max-w-[320px] mb-3">
+                  <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-3">
                     <?php echo get_the_title($post3->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_post_thumbnail_url($post3->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post3->ID); ?>" class="font-family-oswald uppercase text-sport text-sm flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_post_thumbnail_url($post3->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post3->ID); ?>" class="font-family-inter uppercase text-white text-sm flex items-center gap-2 border-b border-cyan-800 w-max px-3 pb-2">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -182,14 +182,14 @@ class Gallery1Widget extends WP_Widget
               <div class="w-full h-full bg-cover bg-no-repeat" style="background-image: url(<?php echo get_the_post_thumbnail_url($post4->ID, 'large'); ?>)">
                 <div class="w-full h-full flex flex-col justify-end px-4 md:px-7 pb-6 pt-14 bg-gradient-to-t-mainColor">
                   <p class="badge-sport block">
-                    <span class="font-family-roboto text-sm uppercase text-tarawera-950">
+                    <span class="font-family-inter text-sm uppercase text-teal-800">
                       <?php echo $categoriesPost4[0]->name; ?>
                     </span>
                   </p>
-                  <h4 class="text-lg md:text-xl font-family-oswald text-white uppercase max-w-[320px] mb-3">
+                  <h4 class="text-lg md:text-xl font-family-inter text-white uppercase max-w-[320px] mb-3">
                     <?php echo get_the_title($post4->ID); ?>
                   </h4>
-                  <a href="<?php echo get_the_post_thumbnail_url($post4->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post4->ID); ?>" class="font-family-oswald uppercase text-sport text-sm flex items-center gap-2 border-b border-tarawera-950 w-max px-3 pb-2">
+                  <a href="<?php echo get_the_post_thumbnail_url($post4->ID); ?>" data-lightbox="gallery-1" data-title="<?php echo get_the_title($post4->ID); ?>" class="font-family-inter uppercase text-white text-sm flex items-center gap-2 border-b border-cyan-800 w-max px-3 pb-2">
                     Ver highlights
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                       <mask id="a" width="24" height="24" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">

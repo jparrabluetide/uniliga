@@ -88,7 +88,7 @@ class AnotationPayersWidget extends WP_Widget
               <div class="playerCard">
                 <?php 
                   if(!get_the_post_thumbnail_url($dataId, 'large')) {
-                    $playerImg = get_template_directory_uri() . '/images/avatars/men.webp';
+                    $playerImg = network_home_url() . '/wp-content/themes/uniliga/images/avatars/men.webp';
                   } else {
                     $playerImg = get_the_post_thumbnail_url($dataId, 'large');
                   }
