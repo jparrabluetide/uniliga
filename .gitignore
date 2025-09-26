@@ -108,6 +108,7 @@ $RECYCLE.BIN/
 
 # Example themes
 /themes/twenty*/
+/themes/uniliga-v1.0/
 
 # Example plugin
 /plugins/hello.php
