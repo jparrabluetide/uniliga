@@ -45,6 +45,10 @@
   @apply text-cyan-400;
 }
 
+.main-logo img {
+  @apply !w-[150px];
+}
+
 /*Menu sport*/
 
 .menu-sport ul li {

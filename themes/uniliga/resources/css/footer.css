@@ -15,3 +15,7 @@
 .menu-footer-1 .current-menu-item {
   @apply text-cyan-400;
 }
+
+.footer-list-icon svg {
+  @apply w-[14px] h-[14px];
+}
