@@ -15,6 +15,15 @@ function bluetide_fields_gallery1()
       'show_in_rest' => true,
     )
   );
+  //Agregar url externa
+  $cmb->add_field(
+    array(
+      'id' => $prefix . 'url',
+      'name' => esc_html__('Url', 'bluetide'),
+      'desc' => esc_html__('Url', 'bluetide'),
+      'type' => 'text_url',
+    )
+  );
 
   $cmb->add_field(
     array(
